@@ -11,6 +11,7 @@
 \usepackage{titletoc}
 \usepackage{etoolbox}
 \usepackage{geometry}
+\usepackage{etoolbox} % for removing lof, lot grouping
 
 \usepackage[
     backend=biber,
@@ -36,6 +37,13 @@
 \titleformat{\chapter}[hang] 
 {\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter:}{5pt}{} 
 \titlespacing*{\chapter}{0pt}{-30pt}{10pt}
+
+
+% SETUP: REMOVE CHAPTER GROUPING IN LOT AND LOF
+\makeatletter
+\patchcmd{\@chapter}{\addtocontents{lof}{\protect\addvspace{10\p@}}}{}{}{}% LoF
+\patchcmd{\@chapter}{\addtocontents{lot}{\protect\addvspace{10\p@}}}{}{}{}% LoT
+\makeatother
 
 % ================ SETUP: TABLE OF CONTENTS
 
