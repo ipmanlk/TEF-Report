@@ -2,7 +2,7 @@
 \usepackage{graphicx}
 \usepackage{fontspec}
 \usepackage[utf8]{inputenc}
-\usepackage[acronym, nonumberlist, section]{glossaries}
+\usepackage[acronym, nonumberlist, section, nogroupskip]{glossaries}
 \usepackage[english]{babel}
 \usepackage{indentfirst}
 \usepackage{titlesec}
@@ -12,42 +12,37 @@
 \usepackage{etoolbox}
 \usepackage{geometry}
 \usepackage{etoolbox} % for removing lof, lot grouping
-
 \usepackage[
     backend=biber,
     style=ieee,
   ]{biblatex}
 \usepackage{setspace}
 
-%================ SETUP: ACRONYMS
+%================ SETUP: PATHS
+\graphicspath{ {./images/} }
+\addbibresource{./references/biblography.bib}
+
+
+%================ SETUP: LIST OF ACRONYMS
 \makeglossaries
+\setglossarystyle{list}
+
 \newacronym{bit}{BIT}{Bachelor of Information Technology}
 \newacronym{ucsc}{UCSC}{University of Colombo School of Computing}
-\newacronym{it}{IT}{Information Technology}
 \newacronym{grn}{GRN}{Goods Received Note}
 \newacronym{sdlc}{SDLC}{Software Development Life Cycle}
 \newacronym{mvc}{MVC}{Model View Controller}
 \newacronym{uml}{UML}{Unified Modeling Language}
 \newacronym{erd}{ERD}{Entity Relationship Diagram}
 
-%================ SETUP: PATHS
-\graphicspath{ {./images/} }
-\addbibresource{./references/biblography.bib}
 
-%================ SETUP: FORMAT CHAPTER NAMES IN THE DOCUMENT BODY
+%================ SETUP: FORMAT CHAPTER NAMES IN THE DOCUMENT BODY (PAGES)
 \titleformat{\chapter}[hang] 
 {\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter:}{5pt}{} 
 \titlespacing*{\chapter}{0pt}{-30pt}{10pt}
 
 
-% SETUP: REMOVE CHAPTER GROUPING IN LIST OF TABLES AND LIST OF FIGURES
-\makeatletter
-\patchcmd{\@chapter}{\addtocontents{lof}{\protect\addvspace{10\p@}}}{}{}{}% LoF
-\patchcmd{\@chapter}{\addtocontents{lot}{\protect\addvspace{10\p@}}}{}{}{}% LoT
-\makeatother
-
 % ================ SETUP: TABLE OF CONTENTS
-
 % space before and after toc title
 \setlength{\cftbeforetoctitleskip}{3pt}
 \setlength{\cftaftertoctitleskip}{10pt}
@@ -61,13 +56,13 @@
    {}% <numberless-entry-format>
    {\titlerule*[0.8pc]{.}\contentspage}
 
-% section and sub section spacing
+% set space above section & subsection titles
 \setlength{\cftbeforesecskip}{10pt}
 \setlength{\cftbeforesubsecskip}{10pt}
 
-
-% dotted lines for chapters
+% dotted lines for chapters titles
 \renewcommand{\cftchapleader}{\cftdotfill{\cftdotsep}}
+
 
 % ================ SETUP: LIST OF FIGURES
 % space before and after lof title
@@ -80,6 +75,12 @@
 % left indent
 \setlength{\cftfigindent}{0pt}
 
+% disable grouping entries based on chapters
+\makeatletter
+\patchcmd{\@chapter}{\addtocontents{lof}{\protect\addvspace{10\p@}}}{}{}{}
+\makeatother
+
+
 % ================ SETUP: LIST OF TABLES
 % space before and after lof title
 \setlength{\cftbeforelottitleskip}{3pt}
@@ -91,8 +92,11 @@
 % left indent
 \setlength{\cfttabindent}{0pt}
 
-% ================ SETUP: LIST OF ACRONYMS
-\setglossarystyle{tree}
+% disable grouping entries based on chapters
+\makeatletter
+\patchcmd{\@chapter}{\addtocontents{lot}{\protect\addvspace{10\p@}}}{}{}{}
+\makeatother
+
 
 %================ SETUP: FONTS
 \setmainfont[
@@ -102,19 +106,23 @@
  	BoldItalicFont={LiberationSerif-BoldItalic.ttf}
  ]{LiberationSerif-Regular.ttf}
  
+
 %=============== SETUP: MARGIN AND PAGE SETUP
 \geometry{a4paper, left=37mm,  top=25mm, bottom=25mm, right=25mm}
 % \usepackage[document]{ragged2e} % left-alignment
 % \hyphenpenalty=10000
 % \tolerance=10000
 
-%--------------------------------
+
+%=============== START OF THE DOCUMENT
 \begin{document}
 \onehalfspacing
 
+
 %=============== SETUP: PARAGRAPH STYLES
 \setlength{\parindent}{3em} % start indentation
-\setlength{\parskip}{1em} % space between two parapgrahs
+\setlength{\parskip}{1em} % vertical space between two paragraphs
+
 
 %========= PAGE: TITLE PAGE (COVER)
 \thispagestyle{empty}
@@ -146,12 +154,13 @@
 			\includegraphics[width=0.15\textwidth]{uoc/ucsc_logo.png}%
 			\begin{minipage}[b]{0.7\textwidth}
 				\centering
-				{\small \bf Degree of Bachelor of Information Technology of the University of Colombo School of Computing}
+				{\small \bf Degree of \acrlong{bit} of the \acrlong{ucsc}}
 			\end{minipage}%
 			\includegraphics[width=0.15\textwidth]{uoc/bit_logo.png}
 		\end{large}
 	\end{center}
 \end{titlepage}
+
 
 %========= PAGE: ABSTRACT
 \newpage
@@ -172,6 +181,7 @@ Visual Studio code was used to implement the proposed system in TypeScript and J
 
 This proposed system will achieve client's functional and non-functional requirements by providing an efficient and user friendly environment. Also, this will provide tools to optimize business processes and make decisions based on more accurate reports and data.
 
+
 %========== PAGE: TABLE OF CONTENT
 \newpage
 \addcontentsline{toc}{chapter}{\bf{Contents}}
@@ -180,6 +190,7 @@ This proposed system will achieve client's functional and non-functional require
 \end{singlespacing}
 \setlength{\parskip}{1em}
 \renewcommand{\baselinestretch}{2.0}
+
 
 %========== PAGE: LIST OF FIGURES
 \newpage
@@ -190,6 +201,7 @@ This proposed system will achieve client's functional and non-functional require
 % \setlength{\parskip}{1em}
 \renewcommand{\baselinestretch}{2.0}
 
+
 %========== PAGE: LIST OF TABLES
 \newpage
 \addcontentsline{toc}{chapter}{\bf{List of Tables}}
@@ -198,6 +210,7 @@ This proposed system will achieve client's functional and non-functional require
 \end{singlespacing}
 % \setlength{\parskip}{1em}
 \renewcommand{\baselinestretch}{2.0}
+
 
 %========== PAGE: LIST OF ACRONYMS
 % \section*{\Huge List of Acronyms}
@@ -209,12 +222,13 @@ This proposed system will achieve client's functional and non-functional require
 % \setlength{\parskip}{1em}
 % \renewcommand{\baselinestretch}{2.0}
 
+
 %================ SETUP: SECTION TITLE FONT SIZES
 \titleformat*{\section}{\fontsize{16}{19}\bfseries\normalfont}
 \titleformat*{\subsection}{\fontsize{14}{17}\bfseries\normalfont}
 \titleformat*{\subsubsection}{\fontsize{12}{15}\bfseries\normalfont}
 
-%>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+%>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 % Main body of Thesis
 %========= Start of Thesis 
 \newpage
