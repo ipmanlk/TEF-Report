@@ -34,6 +34,8 @@
 \newacronym{mvc}{MVC}{Model View Controller}
 \newacronym{uml}{UML}{Unified Modeling Language}
 \newacronym{erd}{ERD}{Entity Relationship Diagram}
+\newacronym{ui}{UI}{User Interface}
+\newacronym{gui}{GUI}{Graphical User Interface}
 
 
 %================ SETUP: FORMAT CHAPTER NAMES IN THE DOCUMENT BODY (PAGES)
@@ -56,12 +58,16 @@
    {}% <numberless-entry-format>
    {\titlerule*[0.8pc]{.}\contentspage}
 
-% set space above section & subsection titles
+% set space above section, subsection & subsubsection titles
 \setlength{\cftbeforesecskip}{10pt}
 \setlength{\cftbeforesubsecskip}{10pt}
+\setlength{\cftbeforesubsubsecskip}{10pt}
 
 % dotted lines for chapters titles
 \renewcommand{\cftchapleader}{\cftdotfill{\cftdotsep}}
+
+% enable subsubsections
+\setcounter{tocdepth}{4}
 
 
 % ================ SETUP: LIST OF FIGURES
@@ -234,6 +240,7 @@ This proposed system will achieve client's functional and non-functional require
 \newpage
 \pagenumbering{arabic}
 \setcounter{page}{1}
+\setcounter{secnumdepth}{3} % enable subsubsection numbering
 \onehalfspacing
 
 \chapter{Introduction}
@@ -452,7 +459,7 @@ Due to the nature of requirements of this system, iterative and incremental appr
 
 Furthermore, actors involved in this system have a tendency of requesting changes to existing requirements and difficulty in explaining existing business processes. This also influenced selecting this methodology because it allows us to have a flexible way to manage changes even in a later stage of the development.
 
-"In an Iterative Incremental model, initially, a partial implementation of a total system is constructed so that it will be in a deliverable state. Increased functionality is added. Defects, if any, from the prior delivery are fixed and the working product is delivered. The process is repeated until the entire product development is completed. The repetitions of these processes are called iterations. At the end of every iteration, a product increment is delivered. \cite{tpoint_2019_sdlc}".
+``In an Iterative Incremental model, initially, a partial implementation of a total system is constructed so that it will be in a deliverable state. Increased functionality is added. Defects, if any, from the prior delivery are fixed and the working product is delivered. The process is repeated until the entire product development is completed. The repetitions of these processes are called iterations. At the end of every iteration, a product increment is delivered \cite{tpoint_2019_sdlc}''.
 
 As stated above, this modal provide a flexible framework for developing the system with continuous user-feedback and ability to modify existing features even in a later stage of the development.
 
@@ -477,7 +484,7 @@ If a modal like waterfall were to use for this system, it would be very difficul
 \chapter{Design}
 After performing the analysis phase, designing phase should be performed to provide a technical solution for gathered functional and non-functional requirements during the analysis phase. This design, or rather solution will serve as the foundation in later stages such as coding and implementation.
 
-In this chapter alternative solutions and design diagrams will be explained with the help of \acrshort{uml}. Furthermore, chosen architectural design and user interface design strategeis of the system will also be explained in detail.
+In this chapter alternative solutions and design diagrams will be explained with the help of \acrshort{uml}. Furthermore, chosen architectural design and user interface design strategies of the system will also be explained in detail.
 
 \section{Design strategies}
 
@@ -519,7 +526,7 @@ Since this model provides an isolation between different components based on the
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.5\textwidth]{mvc_architecture.png}
-	\caption{\acrshort{mvc} Architecture}
+	\caption{MVC Architecture}
 \end{figure}
 
 \acrshort{mvc} modal is popular due to it’s powerful nature of separating data and its representations. Simply put, same data can be shown to two different users in two different ways with the help of this modal.
@@ -539,7 +546,7 @@ Among various diagrams described in the \acrshort{uml} specification, following 
 \subsection{Use Case Diagram}
 A use case diagram is a dynamic or behavior diagram in \acrshort{uml}. Use case diagrams model the functionality of a system using actors and use cases. Use cases are a set of actions, services, and functions that the system needs to perform \cite{paradigm_2018_uml}.
 
-In this context, a "system" is something being developed or operated, such as a web site. The "actors" are people or entities operating under defined roles within the system.
+In this context, a ``system'' is something being developed or operated, such as a web site. The ``actors'' are people or entities operating under defined roles within the system.
 
 \begin{figure}[H]
 	\centering
@@ -588,7 +595,7 @@ In this context, a "system" is something being developed or operated, such as a 
 	\centering
 	\begin{tabular}{ |c|p{10.2cm}| }
 		\hline
-		Use Case        & Login to the sysem    \newline            \\
+		Use Case        & Login to the system    \newline           \\
 		\hline
 		Actor/s         & All Actors  \newline                      \\
 		\hline
@@ -649,7 +656,7 @@ In software engineering, a class diagram in the \acrfull{uml} is a type of stati
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{uml/sequence_production_order.jpg}
-	\caption{Sequeunce Diagram for a production order}
+	\caption{Sequence Diagram for a production order}
 \end{figure}
 
 \newpage
@@ -659,12 +666,51 @@ In software engineering, a class diagram in the \acrfull{uml} is a type of stati
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{uml/er_partial_system.png}
-	\caption{{\acrshort{erd}} for the entire system}
+	\caption{ERD for the entire system}
 \end{figure}
 
 \subsection{User interface design}
-Include description about UI designing and UI Wireframing.
-Include 5 or more Wireframes of the system.
+\acrlong{ui}, or \acrshort{ui} can be simply described as the view users see and perform actions on. This is one of the most critical aspects of the system since the complexity and user­friendliness of the \acrshort{ui} can impact the success of the overall project. \acrshort{ui} design can also be defined as the process of designing the way in which system users can access system functionality, and the way that information produced by the system is displayed \cite{sommerville_2008_software}.
+
+A good \acrshort{ui} provides a ``user-friendly'' experience, allowing the user to interact with the software or hardware in a natural and easy way. Nearly all software programs have a \acrlong{gui}, or \acrshort{gui}. This means the program includes graphical controls, which the user can select using a mouse or
+keyboard. A typical \acrshort{gui} of a software program includes a menu bar, toolbar, windows, buttons, and other controls.
+
+Since the users of this system are with intermediate computer skills, the system should allow easy navigation with consistency between separate views. It should also provide simplicity and descriptive feedback messages users with minimal technical knowledge can easily understand.
+
+\subsubsection{Dashboard UI}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{system/dashboard.png}
+	\caption{Dashboard UI}
+\end{figure}
+
+\subsubsection{Employee List UI}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{system/employee_table.png}
+	\caption{Employee List UI}
+\end{figure}
+
+\subsubsection{View Employee UI}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{system/employee_view.png}
+	\caption{View Employee UI}
+\end{figure}
+
+\subsubsection{Edit User UI}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{system/user_edit.png}
+	\caption{Edit User UI}
+\end{figure}
+
+\subsubsection{Employee Print Preview Window}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{system/employee_print.png}
+	\caption{Employee Print Preview Window}
+\end{figure}
 
 %>>>>>>>>>>>>>>>>>>>>> End of Thesis 
 
