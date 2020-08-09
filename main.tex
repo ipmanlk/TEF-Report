@@ -2,7 +2,7 @@
 \usepackage{graphicx}
 \usepackage{fontspec}
 \usepackage[utf8]{inputenc}
-\usepackage[acronym,toc, nonumberlist]{glossaries}
+\usepackage[acronym, nonumberlist, section]{glossaries}
 \usepackage[english]{babel}
 \usepackage{indentfirst}
 \usepackage{titlesec}
@@ -39,7 +39,7 @@
 \titlespacing*{\chapter}{0pt}{-30pt}{10pt}
 
 
-% SETUP: REMOVE CHAPTER GROUPING IN LOT AND LOF
+% SETUP: REMOVE CHAPTER GROUPING IN LIST OF TABLES AND LIST OF FIGURES
 \makeatletter
 \patchcmd{\@chapter}{\addtocontents{lof}{\protect\addvspace{10\p@}}}{}{}{}% LoF
 \patchcmd{\@chapter}{\addtocontents{lot}{\protect\addvspace{10\p@}}}{}{}{}% LoT
@@ -201,8 +201,9 @@ This proposed system will achieve client's functional and non-functional require
 %========== PAGE: LIST OF ACRONYMS
 % \section*{\Huge List of Acronyms}
 % \addcontentsline{toc}{chapter}{\bf{List of Acronyms}}
-
-\printglossary[type=\acronymtype,title=List of Acronyms, toctitle=\bf{List of Acronyms}]
+\newpage
+\addcontentsline{toc}{chapter}{\bf{List of Acronyms}}
+\printglossary[type=\acronymtype,title=\Huge{List of Acronyms}]
 
 % \setlength{\parskip}{1em}
 % \renewcommand{\baselinestretch}{2.0}
