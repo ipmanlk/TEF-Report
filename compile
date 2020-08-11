@@ -1,0 +1,40 @@
+#!/bin/bash
+say() {
+    echo "$@" | sed \
+        -e "s/\(\(@\(red\|green\|yellow\|blue\|magenta\|cyan\|white\|reset\|b\|u\)\)\+\)[[]\{2\}\(.*\)[]]\{2\}/\1\4@reset/g" \
+        -e "s/@red/$(tput setaf 1)/g" \
+        -e "s/@green/$(tput setaf 2)/g" \
+        -e "s/@yellow/$(tput setaf 3)/g" \
+        -e "s/@blue/$(tput setaf 4)/g" \
+        -e "s/@magenta/$(tput setaf 5)/g" \
+        -e "s/@cyan/$(tput setaf 6)/g" \
+        -e "s/@white/$(tput setaf 7)/g" \
+        -e "s/@reset/$(tput sgr0)/g" \
+        -e "s/@b/$(tput bold)/g" \
+        -e "s/@u/$(tput sgr 0 1)/g"
+}
+
+say @b@green[[log: cleared output directory.]] &&
+rm output/* &&
+
+say @b@green[[log: running pre-compilation.]] &&
+xelatex -interaction nonstopmode -halt-on-error -file-line-error -output-directory=./output main.tex &&
+
+clear &&
+
+say @b@green[[log: running biber.]] &&
+biber output/main &&
+
+clear &&
+
+cd output/ &&
+say @b@green[[log: running makeglossaries.]] &&
+makeglossaries main &&
+cd .. &&
+
+clear &&
+
+say @b@green[[log: running post-compilation.]] &&
+xelatex -interaction nonstopmode -halt-on-error -file-line-error -output-directory=./output main.tex && xelatex -interaction nonstopmode -halt-on-error -file-line-error -output-directory=./output main.tex && 
+
+say @b@green[[log: document has been compiled!.]]
