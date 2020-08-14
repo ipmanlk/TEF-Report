@@ -246,7 +246,7 @@ This proposed system will achieve client's functional and non-functional require
 \chapter{Introduction}
 This chapter introduces background information of the selected company for the project, the problem going to be solved, objectives hoping to accomplish and scope of the project.
 
-\section{Motivation for the project}
+\section{Motivation}
 Two Elephants Fireworks is one of the major gun powder based product manufacturers in  the Andiambalama. But currently all of their processes and paperwork are done manually. Due to high number of clients and suppliers, managing all of their operations manually has become a very time consuming inefficient task. Below are some of the difficulties they have to face because of their current way of performing tasks.
 
 \begin{itemize}
@@ -261,7 +261,7 @@ Two Elephants Fireworks is one of the major gun powder based product manufacture
 
 In order to provide a reliable solution that can address above issues, I wish to develop a computer based sales and production management system. This system will be able to improve the profits, efficiency of daily operations and overall customer satisfaction by reducing complexities and providing better solutions to existing business processes.
 
-\section{Objectives}
+\section{Aims \& Objectives of the Project}
 
 Intend of this computer based system is to provide a reliable solution for existing drawbacks.  This system hope to achieve following objectives in order to improve the state of current operations.
 
@@ -287,7 +287,7 @@ Intend of this computer based system is to provide a reliable solution for exist
 	\item Help this business to gain competitive advantage by allowing access to more accurate information.
 \end{itemize}
 
-\section{Scope}
+\section{Scope of the Project}
 Scope of this system covers the sales and production area of this business according to their requirements. Below are the details that will be managed by the proposed system.
 
 \begin{itemize}
@@ -337,7 +337,7 @@ The requirements should be documented, measurable, testable, traceable, related 
 
 After collecting requirements through various methods they are classified into two categories called functional requirements and non-functional requirements. Furthermore, how much of the actual idea can be implemented will also be considered in this phase.
 
-\section{Review of similar systems}
+\section{Review of similar systems with references}
 By observing existing web-based solutions to similar domains  more experience can be obtained on how our proposed system should be developed and how required features should be presented to the user.  Following are few of the systems that were reviewed before starting building this system.
 
 \subsection{Sales and Inventory Management System in Dineth Stores}
@@ -394,7 +394,7 @@ This grocery uses their sales management system to perform daily transactions an
 	\caption{Comparison between similar systems}
 \end{table}
 
-\section{Existing System}
+\section{Explaining the current system using diagrams}
 Current system with a file-based approach stores all of the records in physical papers. Due to this procedure it takes a long time to process transactions. Since this organization deals with huge amount of data, manipulation and retrieval of existing records has become very inefficient.
 
 Furthermore, when new sales are made or customer payment accepted, inventory and payment details need to be manually updated in multiple places. When issuing purchase orders, accepting \acrshort{grn}s and ordering supplies there is a great deal of paperwork that needs to be done. Also, management have difficulties finding  necessary reports and data due the large amount of unorganized paperwork. Following figure briefly shows the existing manual system.
@@ -405,7 +405,7 @@ Furthermore, when new sales are made or customer payment accepted, inventory and
 	\caption{Use Case Diagram of the current manual system}
 \end{figure}
 
-\section{Analysis of the requirements}
+\section{Identifying the functional and non-functional requirements}
 
 \subsection{Requirement gathering techniques}
 In order to capture functional and non-function requirements of the existing system, following techniques were used.
@@ -454,7 +454,7 @@ Non-functional requirements describe the features this system should have. Non-f
 	      System has very fast response rates and accurate database management mechanisms preventing issues such as data inconsistencies and slow data retrieval.
 \end{itemize}
 
-\section{Process model}
+\section{Justification for the choice of the development life cycle}
 Due to the nature of requirements of this system, iterative and incremental approach was selected as the development methodology. The most prominent reason for this was unclear nature of requirements and the complexity of operations in the existing manual system.
 
 Furthermore, actors involved in this system have a tendency of requesting changes to existing requirements and difficulty in explaining existing business processes. This also influenced selecting this methodology because it allows us to have a flexible way to manage changes even in a later stage of the development.
@@ -486,7 +486,7 @@ After performing the analysis phase, designing phase should be performed to prov
 
 In this chapter alternative solutions and design diagrams will be explained with the help of \acrshort{uml}. Furthermore, chosen architectural design and user interface design strategies of the system will also be explained in detail.
 
-\section{Design strategies}
+\section{Comparison of alternative design strategies}
 
 \subsection{Maintain new system for some processes alongside existing file-based system}
 With this strategy new system could have been developed to support the existing processes and only to provide features such as report generation and billing. But, this will result in loss of time and cost due to reasons such as wastage of papers and manpower.
@@ -507,7 +507,7 @@ Beside above requirements, there are several benefits using a web-based solution
 	\item Ability to access the system even outside of work premises. This can be considered as the most important benefit.
 \end{itemize}
 
-\section{Architectural design}
+\section{Architectural design of the system}
 This proposed system is being implemented using the \acrshort{mvc} or \acrlong{mvc} structural design. This pattern isolates the representation of information from user interactions. This is a widely used Object-Oriented design pattern for developing web-based and desktop applications.
 
 Since this model provides an isolation between different components based on their  usage, it’s very suitable for the development of this solution. Furthermore, nature of this model allows developers to focus on important parts of the system without getting distracted by unnecessary details. This model consists of the following three major components.
@@ -659,8 +659,7 @@ In software engineering, a class diagram in the \acrfull{uml} is a type of stati
 	\caption{Sequence Diagram for a production order}
 \end{figure}
 
-\newpage
-\subsection{Data modeling}
+\section{Data modelling diagrams}
 \acrlong{erd}, also known as \acrshort{erd}, ER Diagram or ER model, is a type of structural diagram for use in database design. An ERD contains different symbols and connectors that visualize two important information: The major entities within the system scope, and the inter-relationships among these entities \cite{paradigm_2018_uml}.
 
 \begin{figure}[H]
@@ -669,7 +668,8 @@ In software engineering, a class diagram in the \acrfull{uml} is a type of stati
 	\caption{ERD for the entire system}
 \end{figure}
 
-\subsection{User interface design}
+\newpage
+\section{User interface design}
 \acrlong{ui}, or \acrshort{ui} can be simply described as the view users see and perform actions on. This is one of the most critical aspects of the system since the complexity and user­friendliness of the \acrshort{ui} can impact the success of the overall project. \acrshort{ui} design can also be defined as the process of designing the way in which system users can access system functionality, and the way that information produced by the system is displayed \cite{sommerville_2008_software}.
 
 A good \acrshort{ui} provides a ``user-friendly'' experience, allowing the user to interact with the software or hardware in a natural and easy way. Nearly all software programs have a \acrlong{gui}, or \acrshort{gui}. This means the program includes graphical controls, which the user can select using a mouse or
