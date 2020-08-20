@@ -150,7 +150,7 @@
 
 			\vspace{1cm}
 
-			\bf{2020/ August}
+			\bf{2020/ September}
 
 			\vspace{2.5cm}
 
@@ -177,15 +177,15 @@
 \addcontentsline{toc}{chapter}{\bf{Abstract}}
 
 Two Elephants Fireworks is a gun powder based product manufacturing company based on Walpala. Their products range from
-firecrackers to high-power fireworks for large scale events. As a result of that, currently employees of this company has to deal with manually maintaining list of transactions, products and material details. There is no process to store and keep track of customer details at the moment and generating reports to make business decisions and observe growth and customer demands is really hard due to the nature of these manual processes.
+firecrackers to high-power fireworks for large scale events. Currently, employees in this company have to deal with manually maintaining multiple lists of transactions, products and material details. There is no way to store and keep track of customer details at the moment and generating reports to make business decisions and observe growth and customer demands is really hard due to the nature of these manual processes.
 
-Since the current system is manual, it’s very difficult to manage daily sales, orders, material details, billing process and the rest of their daily operations. Having to maintain and keep track of hundreds of books and papers makes it very hard and time consuming to fulfill customer orders and causes some customers to wait for a long period of time. Also, since manually keeping tack of the inventory is needed, it consume lot of manpower and time. Furthermore, due to human errors there are considerable amount of late order  deliveries. The owner of this company is also having trouble checking latest order and sales information while he is traveling.
+Since the current system is manual, it’s very difficult to manage daily sales, orders, material details, billing process and the rest of their daily operations. Having to maintain and keep track of hundreds of books and papers makes it very hard and time-consuming to fulfill customer orders and causes some customers to wait for a long period of time. Also, since manually keeping tack of the inventory is needed, it consumes a lot of manpower and time. Furthermore, due to human errors there is a considerable amount of late order  deliveries. The owner of this company is also having trouble checking recent orders and sales information while he is traveling.
 
-Taking above issues into consideration, the proposed system  is being developed for a web-based environment. It aims to make it easy to manage daily orders, inventory, material processing, customer details..etc. This system supports users, privileges and accurate report generating for making business decisions. Not only that, but also this will facilitate remote access to the system making it possible to check recent information without having to come to the office.
+Taking above issues into consideration, the proposed system  is being developed for a web-based environment. It aims to make it easy to manage daily orders, inventory, material processing, customer details...etc. This system supports users, privileges and accurate report generating for making business decisions. Not only that, but also this will facilitate remote access to the system making it possible to check recent information without having to come to the office.
 
-Visual Studio code was used to implement the proposed system in TypeScript and JavaScript. MySQL and TypeORM is being used to manage the data storing and retrieving aspect of the system. Chart.js and Datatables are used for the report generating process. Furthermore, \acrlong{uml} was used for the analysis and design of the system. Also, this system uses the \acrshort{mvc} architecture and iterative and incremental approach.
+Visual Studio Code is being used to develop the proposed system in TypeScript and JavaScript languages. MySQL and TypeORM are used to manage the data storing and retrieving aspect of the system along with Chart.js and Datatables to facilitate the report generating process. Furthermore, \acrlong{uml} was used for the analysis and design processes and this system is being developed according to the \acrshort{mvc} architecture and iterative and incremental approach.
 
-This proposed system will achieve client's functional and non-functional requirements by providing an efficient and user friendly environment. Also, this will provide tools to optimize business processes and make decisions based on more accurate reports and data.
+This proposed system will achieve client's functional and non-functional requirements by providing an efficient and user-friendly environment. Also, this will provide tools to optimize business processes and make decisions based on more accurate reports and data.
 
 
 %========== PAGE: TABLE OF CONTENT
@@ -246,14 +246,14 @@ This proposed system will achieve client's functional and non-functional require
 \onehalfspacing
 
 \chapter{Introduction}
-This chapter introduces background information of the selected company for the project, the problem going to be solved, objectives hoping to accomplish and scope of the project.
+This chapter introduces background information of the selected company for the project, the problems going to be solved, objectives hoping to accomplish and scope of the project.
 
-\section{Motivation for the project}
-Two Elephants Fireworks is one of the major gun powder based product manufacturers in  the Andiambalama. But currently all of their processes and paperwork are done manually. Due to high number of clients and suppliers, managing all of their operations manually has become a very time consuming inefficient task. Below are some of the difficulties they have to face because of their current way of performing tasks.
+\section{Motivation}
+Two Elephants Fireworks is one of the major gun powder based product manufacturers in  the Andiambalama. But currently, all of their processes and paperwork are done manually. Due to high number of clients and suppliers, managing all of their operations this way has become a very time-consuming inefficient task. Below are some of the difficulties they have to face because of their current way of performing tasks.
 
 \begin{itemize}
-	\item There is no proper way to manage customer details so they have to request same details over and over again.
-	\item Customer order management process is very time consuming and inconsistent.
+	\item There is no proper way to manage customer details, so they have to request same details over and over again.
+	\item Customer order management process is very time-consuming and inconsistent.
 	\item They are unable to properly calculate measurements of raw materials needed to complete an order.
 	\item Lot of materials and processed materials go to waste because there is no way to properly keep track of the inventory.
 	\item There is no way to generate reports about sales and inventory to make business decisions such as when to increase the production \& supply.
@@ -263,7 +263,7 @@ Two Elephants Fireworks is one of the major gun powder based product manufacture
 
 In order to provide a reliable solution that can address above issues, I wish to develop a computer based sales and production management system. This system will be able to improve the profits, efficiency of daily operations and overall customer satisfaction by reducing complexities and providing better solutions to existing business processes.
 
-\section{Objectives}
+\section{Aims \& Objectives of the Project}
 
 Intend of this computer based system is to provide a reliable solution for existing drawbacks.  This system hope to achieve following objectives in order to improve the state of current operations.
 
@@ -289,7 +289,7 @@ Intend of this computer based system is to provide a reliable solution for exist
 	\item Help this business to gain competitive advantage by allowing access to more accurate information.
 \end{itemize}
 
-\section{Scope}
+\section{Scope of the Project}
 Scope of this system covers the sales and production area of this business according to their requirements. Below are the details that will be managed by the proposed system.
 
 \begin{itemize}
@@ -339,7 +339,7 @@ The requirements should be documented, measurable, testable, traceable, related 
 
 After collecting requirements through various methods they are classified into two categories called functional requirements and non-functional requirements. Furthermore, how much of the actual idea can be implemented will also be considered in this phase.
 
-\section{Review of similar systems}
+\section{Review of similar systems with references}
 By observing existing web-based solutions to similar domains  more experience can be obtained on how our proposed system should be developed and how required features should be presented to the user.  Following are few of the systems that were reviewed before starting building this system.
 
 \subsection{Sales and Inventory Management System in Dineth Stores}
@@ -396,8 +396,8 @@ This grocery uses their sales management system to perform daily transactions an
 	\caption{Comparison between similar systems}
 \end{table}
 
-\section{Existing System}
-Current system with a file-based approach stores all of the records in physical papers. Due to this procedure it takes a long time to process transactions. Since this organization deals with huge amount of data, manipulation and retrieval of existing records has become very inefficient.
+\section{Explaining the current system using diagrams}
+Current system with a file-based approach stores all records in physical papers. Due to this procedure it takes a long time to process transactions. Since this organization deals with huge amount of data, manipulation and retrieval of existing records has become very inefficient.
 
 Furthermore, when new sales are made or customer payment accepted, inventory and payment details need to be manually updated in multiple places. When issuing purchase orders, accepting \acrshort{grn}s and ordering supplies there is a great deal of paperwork that needs to be done. Also, management have difficulties finding  necessary reports and data due the large amount of unorganized paperwork. Following figure briefly shows the existing manual system.
 
@@ -407,7 +407,7 @@ Furthermore, when new sales are made or customer payment accepted, inventory and
 	\caption{Use Case Diagram of the current manual system}
 \end{figure}
 
-\section{Analysis of the requirements}
+\section{Identifying the functional and non-functional requirements}
 
 \subsection{Requirement gathering techniques}
 In order to capture functional and non-function requirements of the existing system, following techniques were used.
@@ -437,33 +437,33 @@ Functional requirements specify features developers must implement in order to a
 \end{itemize}
 
 \subsection{Non-Functional Requirements}
-Non-functional requirements describe the features this system should have. Non-functional requirements are difficult to work with than functional ones because they depends on each user perspective and their preferences. But, user friendliness of the system depends on how well these non-functional requirements are met.  Following are the list of non-functional requirements aim to offer in the proposed system.
+Non-functional requirements describe the features this system should have. Non-functional requirements are difficult to work with than functional ones because they depend on each user's perspective and their preferences. But, user-friendliness of the system depends on how well these non-functional requirements are met. Following are the list of non-functional requirements aim to offer in the proposed system.
 
 \begin{itemize}
 	\item {\bf{Security}}\\
 	      Since system will store sensitive details such as personal employee details, there are security measures in place such as user access management, privileges control and unauthorized accedes prevention.
 
 	\item {\bf{Usability}}\\
-	      System user-interface contain easy to to navigate menus, dashboard and a clear way to indicate the current location user is in. This maximizes the usability of the system allowing user to switch between modules seamlessly.
+	      System user-interface contain easy to navigate menus, dashboard and a clear way to indicate the current location user is in. This maximizes the usability of the system allowing user to switch between modules seamlessly.
 
 	\item {\bf{Accuracy}}\\
-	      Proposed system has mechanisms in place to to handle transactions with minimum error probability allowing users to perform their tasks and retrieve information with high accuracy.
+	      Proposed system has mechanisms in place to handle transactions with minimum error probability allowing users to perform their tasks and retrieve information with high accuracy.
 
-	\item {\bf{User friendliness}}\\
-	      User-interface of the system is very simple and easy to to navigate allowing even a new user to learn to perform tasks very quickly.
+	\item {\bf{User-friendliness}}\\
+	      User-interface of the system is very simple and easy to navigate allowing even a new user to learn to perform tasks very quickly.
 
 	\item {\bf{Efficiency and consistency}}\\
 	      System has very fast response rates and accurate database management mechanisms preventing issues such as data inconsistencies and slow data retrieval.
 \end{itemize}
 
-\section{Process model}
+\section{Justification for the choice of the development life cycle}
 Due to the nature of requirements of this system, iterative and incremental approach was selected as the development methodology. The most prominent reason for this was unclear nature of requirements and the complexity of operations in the existing manual system.
 
 Furthermore, actors involved in this system have a tendency of requesting changes to existing requirements and difficulty in explaining existing business processes. This also influenced selecting this methodology because it allows us to have a flexible way to manage changes even in a later stage of the development.
 
 ``In an Iterative Incremental model, initially, a partial implementation of a total system is constructed so that it will be in a deliverable state. Increased functionality is added. Defects, if any, from the prior delivery are fixed and the working product is delivered. The process is repeated until the entire product development is completed. The repetitions of these processes are called iterations. At the end of every iteration, a product increment is delivered \cite{tpoint_2019_sdlc}''.
 
-As stated above, this modal provide a flexible framework for developing the system with continuous user-feedback and ability to modify existing features even in a later stage of the development.
+As stated above, this modal provides a flexible framework for developing the system with continuous user-feedback and ability to modify existing features even in a later stage of the development.
 
 If a modal like waterfall were to use for this system, it would be very difficult or sometimes impossible to cater to client's requests. Also, since requirements should be clear and entire system design should be completed early in waterfall, end-product could potentially fail to match client expectations. Thus, choosing iterative and incremental modal as the development methodology for this project allows to overcome the difficulties that could have occurred in a strict modal.
 
@@ -488,7 +488,7 @@ After performing the analysis phase, designing phase should be performed to prov
 
 In this chapter alternative solutions and design diagrams will be explained with the help of \acrshort{uml}. Furthermore, chosen architectural design and user interface design strategies of the system will also be explained in detail.
 
-\section{Design strategies}
+\section{Comparison of alternative design strategies}
 
 \subsection{Maintain new system for some processes alongside existing file-based system}
 With this strategy new system could have been developed to support the existing processes and only to provide features such as report generation and billing. But, this will result in loss of time and cost due to reasons such as wastage of papers and manpower.
@@ -497,7 +497,7 @@ With this strategy new system could have been developed to support the existing 
 Even though there exists software targeted towards production management, they are mostly developed for generalized businesses processes. Since this organization have unique business processes and specific requirements, usage of that sort of software could have done more harm than good. Furthermore, there is no way to guarantee the reliability of freely available solutions.
 
 \section{Justification for the selected design strategy}
-This is system is being developed as a web-based solution since owners and management of this organization is hoping to accesses information such as reports outside of the workplace. Furthermore, since their manages sometimes interact with clients and suppliers outside, it’s required for them to being able to access the system via internet.
+This is system is being developed as a web-based solution because the owners and management of this organization want to access information such as reports from outside the workplace. Their managers sometimes interact with clients and suppliers outside and it’s required for them to being able to access the system via internet. Also, they have plans to expand the businesses and start new factories in the future. This also makes a web-based approach ideal for this situation.
 
 Beside above requirements, there are several benefits using a web-based solution for this organization.
 
@@ -506,10 +506,10 @@ Beside above requirements, there are several benefits using a web-based solution
 
 	\item Platform independent nature of web-based solutions (Since only real requirements are a web browser and internet access).
 
-	\item Ability to access the system even outside of work premises. This can be considered as the most important benefit.
+	\item Ability to access the system even from outside the work premises. This can be considered as the most important benefit.
 \end{itemize}
 
-\section{Architectural design}
+\section{Architectural design of the system}
 This proposed system is being implemented using the \acrshort{mvc} or \acrlong{mvc} structural design. This pattern isolates the representation of information from user interactions. This is a widely used Object-Oriented design pattern for developing web-based and desktop applications.
 
 Since this model provides an isolation between different components based on their  usage, it’s very suitable for the development of this solution. Furthermore, nature of this model allows developers to focus on important parts of the system without getting distracted by unnecessary details. This model consists of the following three major components.
@@ -531,7 +531,7 @@ Since this model provides an isolation between different components based on the
 	\caption{MVC Architecture}
 \end{figure}
 
-\acrshort{mvc} modal is popular due to it’s powerful nature of separating data and its representations. Simply put, same data can be shown to two different users in two different ways with the help of this modal.
+\acrshort{mvc} modal is popular due to its powerful nature of separating data and its representations. Simply put, same data can be shown to two different users in two different ways with the help of this modal.
 
 When modeling system operations and business processes \acrshort{uml} Diagrams were used. \acrshort{uml} is a set of modeling diagrams which allows to look at a system in multiple angles. Graphical symbols provided by \acrshort{uml} allows to modal the proposed system in a way that can improve the understandability between designers and developers, sometimes end-users.
 
@@ -548,7 +548,7 @@ Among various diagrams described in the \acrshort{uml} specification, following 
 \subsection{Use Case Diagram}
 A use case diagram is a dynamic or behavior diagram in \acrshort{uml}. Use case diagrams model the functionality of a system using actors and use cases. Use cases are a set of actions, services, and functions that the system needs to perform \cite{paradigm_2018_uml}.
 
-In this context, a ``system'' is something being developed or operated, such as a web site. The ``actors'' are people or entities operating under defined roles within the system.
+In this context, a ``system'' is something being developed or operated, such as a website. The ``actors'' are people or entities operating under defined roles within the system.
 
 \begin{figure}[H]
 	\centering
@@ -573,7 +573,7 @@ In this context, a ``system'' is something being developed or operated, such as 
 		1. User mused be logged in. \newline
 		2. User should have access to production order view. \newline
 		3. Production order view must be opened. \newline
-		4. Before submission relevant production details should be added.\newline
+		4. Before submission, relevant production details should be added.\newline
 		\\
 		\hline
 		Post-conditions &
@@ -653,7 +653,7 @@ In software engineering, a class diagram in the \acrfull{uml} is a type of stati
 
 \newpage
 \subsection{Sequence Diagram}
-\acrshort{uml} Sequence Diagrams are interaction diagrams that detail how operations are carried out. They capture the interaction between objects in the context of a collaboration. Sequence Diagrams are time focus and they show the order of the interaction visually by using the vertical axis of the diagram to represent time what messages are sent and when \cite{paradigm_2018_uml}.
+\acrshort{uml} Sequence Diagrams are interaction diagrams that detail how operations are carried out. They capture the interaction between objects in the context of a collaboration. Sequence Diagrams are time focus, and they show the order of the interaction visually by using the vertical axis of the diagram to represent time what messages are sent and when \cite{paradigm_2018_uml}.
 
 \begin{figure}[H]
 	\centering
@@ -661,8 +661,7 @@ In software engineering, a class diagram in the \acrfull{uml} is a type of stati
 	\caption{Sequence Diagram for a production order}
 \end{figure}
 
-\newpage
-\subsection{Data modeling}
+\section{Data modelling diagrams}
 \acrlong{erd}, also known as \acrshort{erd}, ER Diagram or ER model, is a type of structural diagram for use in database design. An ERD contains different symbols and connectors that visualize two important information: The major entities within the system scope, and the inter-relationships among these entities \cite{paradigm_2018_uml}.
 
 \begin{figure}[H]
@@ -671,8 +670,9 @@ In software engineering, a class diagram in the \acrfull{uml} is a type of stati
 	\caption{ERD for the entire system}
 \end{figure}
 
-\subsection{User interface design}
-\acrlong{ui}, or \acrshort{ui} can be simply described as the view users see and perform actions on. This is one of the most critical aspects of the system since the complexity and user­friendliness of the \acrshort{ui} can impact the success of the overall project. \acrshort{ui} design can also be defined as the process of designing the way in which system users can access system functionality, and the way that information produced by the system is displayed \cite{sommerville_2008_software}.
+\newpage
+\section{User interface design}
+\acrlong{ui}, or \acrshort{ui} can be simply described as the view users see and perform actions on. This is one of the most critical aspects of the system since the complexity and user-­friendliness of the \acrshort{ui} can impact the success of the overall project. \acrshort{ui} design can also be defined as the process of designing the way in which system users can access system functionality, and the way that information produced by the system is displayed \cite{sommerville_2008_software}.
 
 A good \acrshort{ui} provides a ``user-friendly'' experience, allowing the user to interact with the software or hardware in a natural and easy way. Nearly all software programs have a \acrlong{gui}, or \acrshort{gui}. This means the program includes graphical controls, which the user can select using a mouse or
 keyboard. A typical \acrshort{gui} of a software program includes a menu bar, toolbar, windows, buttons, and other controls.
