@@ -36,7 +36,7 @@
 \newacronym{erd}{ERD}{Entity Relationship Diagram}
 \newacronym{ui}{UI}{User Interface}
 \newacronym{gui}{GUI}{Graphical User Interface}
-
+\newacronym{rdbms}{RDBMS}{Relational Database Management System}
 
 %================ SETUP: FORMAT CHAPTER NAMES IN THE DOCUMENT BODY (PAGES)
 \titleformat{\chapter}[hang] 
@@ -485,7 +485,7 @@ Due to the nature of requirements of this system, iterative and incremental appr
 
 Furthermore, actors involved in this system have a tendency of requesting changes to existing requirements and difficulty in explaining existing business processes. This also influenced selecting this methodology because it allows us to have a flexible way to manage changes even in a later stage of the development.
 
-``In an Iterative Incremental model, initially, a partial implementation of a total system is constructed so that it will be in a deliverable state. Increased functionality is added. Defects, if any, from the prior delivery are fixed and the working product is delivered. The process is repeated until the entire product development is completed. The repetitions of these processes are called iterations. At the end of every iteration, a product increment is delivered \cite{tpoint_2019_sdlc}''.
+``In an Iterative Incremental model, initially, a partial implementation of a total system is constructed so that it will be in a deliverable state. Increased functionality is added. Defects, if any, from the prior delivery are fixed and the working product is delivered. The process is repeated until the entire product development is completed. The repetitions of these processes are called iterations. At the end of every iteration, a product increment is delivered \cite{point_2019_sdlc}''.
 
 As stated above, this modal provides a flexible framework for developing the system with continuous user-feedback and ability to modify existing features even in a later stage of the development.
 
@@ -774,51 +774,85 @@ After taking this business organization's nature, functional and non-functional 
 	\item JQuery 3.5
 	\item Microsoft Project 2016
 	\item Visual paradigm
-	\item NodeJs - 12.0
+	\item Node.js - 12.0
 	\item NPM (Package Manager)
 	\item Google Chrome
 \end{itemize}
 
 \section{Justification for the choice of implementation platform.}
-\subsection{Typescript Language}
-TypeScript is an open-source language which builds on JavaScript, one of the world’s most used tools, by adding static type definitions. Types provide a way to describe the shape of an object, providing better documentation, and allowing TypeScript to validate that your code is working correctly. Writing types can be optional in TypeScript, because type inference allows you to get a lot of power without writing additional code.
 
 \subsection{Visual Studio Code}
-Visual Studio Code is a lightweight but powerful source code editor which runs on your desktop and is available for Windows, macOS and Linux. It comes with built-in support for JavaScript, TypeScript and Node.js and has a rich ecosystem of extensions for other languages (such as C++, C\#, Java, Python, PHP, Go) and runtimes (such as .NET and Unity).
+Visual Studio Code has been the first cross-platform development tool in the Microsoft Visual Studio family that runs on Windows, Linux, and macOS. It is free, open source (https://github.com/Microsoft/vscode), and it is definitely a code-centric tool, which makes it easier to edit code files and folder-based project systems as well as writing cross-platform web and mobile applications over the most popular platforms, such as Node.js and .NET Core, with integrated support for a huge number of languages and rich editing features such as IntelliSense, finding symbol references, quickly reaching a type definition, and much more.
+
+Visual Studio Code is based on Electron (https://electronjs.org/),  a framework for creating cross-platform applications with native technologies, and combines the simplicity of a powerful code editor with the tools a developer needs to support the application lifecycle development, including debuggers and version control integration based on Git. It is therefore a complete development tool, rather than being a simple code editor. For more advanced coding and development, you will certainly consider Microsoft Visual Studio 2017 on Windows and Visual Studio for Mac on macOS, but Visual Studio Code can be really helpful in many situations \cite{alessandrodelsole_2019_visual}.
+
+\subsection{TypeScript Language}
+TypeScript is both a language and a set of tools to generate JavaScript. It was designed by Anders Hejlsberg at Microsoft (the designer of C\#), as an open-source project, to help developers write enterprise scale JavaScript. JavaScript has become widely adopted by programmers around the world as it can run in any browser on any operating system. With the creation of Node, JavaScript can now also run on the server, desktop or mobile.
+
+TypeScript generates JavaScript. it's as simple as that. Instead of requiring a completely new runtime environment, TypeScript generated JavaScript can re-use all of the existing JavaScript tools, frameworks, and wealth of libraries that are available for JavaScript. The TypeScript language and compiler, however, brings the development of JavaScript closer to a more traditional object-oriented experience \cite{rozentals_2015_mastering}.
+
+\subsection{Node.js}
+Node.js is a framework for writing server-side JavaScript applications. It is built on top of the V8 JavaScript runtime and uses an event-driven, non-blocking I/O model that makes it perfect for data-intensive, real-time applications.
+
+Node is often used to build back end services that communicate with client-side applications. These applications get and send data through a back end service called an API. The API serves as an interface between different programs, so they are able to talk to each other. A web app and a mobile app below can leverage the same API to store data, send emails, push notification or initiate workflows on the server \cite{teixeira_2013_professional}.
+
+\subsection{NPM (Package Manager)}
+NPM, short for Node Package Manager, is two things: first and foremost, it is an online repository for the publishing of open-source Node.js projects; second, it is a command-line utility for interacting with said repository that aids in package installation, version management, and dependency management \cite{teixeira_2013_professional}.
 
 \subsection{MySQL 8.0}
-The MySQL™ software delivers a very fast, multithreaded, multi-user, and robust SQL (Structured Query Language) database server. MySQL Server is intended for mission-critical, heavy-load production systems as well as for embedding into mass-deployed software. Oracle is a registered trademark of Oracle Corporation and/or its affiliates. MySQL is a trademark of Oracle Corporation and/or its affiliates, and shall not be used by Customer without Oracle's express written authorization. Other names may be trademarks of their respective owners.
+MySQL is the most popular open- source database system on the market and has been
+around since 1995. Oracle has owned MySQL since 2010, and MySQL is distributed in two
+versions: The Community Edition (open source), and the Enterprise Edition, which you
+must pay for and of course it comes with a series of enhanced features not available in the
+free version.
+
+It must be said that MySQL is easy to use and its operation is very fast. MySQL requires at
+first a general knowledge of SQL to work effectively with it. MySQL does not require much
+more knowledge, but a little knowledge of common relational database management
+system (\acrshort{rdbms}) is helpful.
+
+However, despite the fact that MySQL comes with a minimal configuration to help your database launch and perform well,
+MySQL needs more attention to maintain optimal performance,
+and in general a good understanding of MySQL's configuration becomes more important \cite{vanier_2019_advanced}.
 
 \subsection{MySQL Workbench 8.0}
-MySQL Workbench is a graphical tool for working with MySQL servers and databases. MySQL Workbench fully supports MySQL server versions 5.6 and higher. It is also compatible with older MySQL server 5.x versions, except in certain situations (like displaying the process list) due to changed system tables. It does not support MySQL server versions 4.x.
+MySQL Workbench is a graphical tool for working with MySQL servers and databases. MySQL Workbench fully supports MySQL server versions 5.6 and higher. It is also compatible with older MySQL server 5.x versions, except in certain situations (like displaying the process list) due to changed system tables. It does not support MySQL server versions 4.x \cite{mclaughlin_2013_mysql}.
 
-\subsection{Visual Paradigm UML 8.0 Enterprise Edition}
-Visual Paradigm is a software tool designed for software development teams to model business information system and manage development processes. Visual Paradigm supports key industry modeling languages and standards such as Unified Modeling Language (UML), SoaML, BPMN, XMI, etc. It offers complete tool-set software companies need for requirements capturing, process analysis, system design, database design, and etc.
+\subsection{Visual Paradigm (UML 8.0) Enterprise Edition}
+Visual Paradigm is a software tool designed for software development teams to model business information system and manage development processes. Visual Paradigm supports key industry modeling languages and standards such as Unified Modeling Language (UML), SoaML, BPMN, XMI, etc. It offers complete tool-set software companies need for requirements capturing, process analysis, system design, database design, and etc. \cite{paradigm_2020_what}.
 
 \subsection{ExpressJs - Web Server}
 Express.js is a web application framework for Node.js. It provides various features that make web application development fast and easy which otherwise takes more time using only Node.js.
 
-Express.js is based on the Node.js middleware module called connect which in turn uses http module. So, any middleware which is based on connect will also work with Express.js.
+Express.js is based on the Node.js middleware module called connect which in turn uses http module. So, any middleware which is based on connect will also work with Express.js \cite{azatmardan_2014_pro}.
 
 \subsection{TypeORM}
-TypeORM is an ORM that can run in NodeJS, Browser, Cordova, PhoneGap, Ionic, React Native, NativeScript, Expo, and Electron platforms and can be used with TypeScript and JavaScript (ES5, ES6, ES7, ES8). Its goal is to always support the latest JavaScript features and provide additional features that help you to develop any kind of application that uses databases - from small applications with a few tables to large scale enterprise applications with multiple databases.
+TypeORM framework is an Object Relational Mapping (ORM) framework. In general, Object part refers to the domain / model in your application, Relational part refers to the relationship between tables in Relational Database Management System (e.g. Oracle, MySQL, MS-SQL, PostgreSQL, etc.) and finally the Mapping part refers to the act of bridging the model and our tables.
 
-\subsection{NPM (Package Manager)}
-npm, short for Node Package Manager, is two things: first and foremost, it is an online repository for the publishing of open-source Node.js projects; second, it is a command-line utility for interacting with said repository that aids in package installation, version management, and dependency management.
+ORM is a type of tool that maps entities with database tables. ORM provides simplified development process by automating object-to-table and table-to-object conversion. Once you can write your data model in one place, it becomes easier to update, maintain, and reuse the code.
+
+Since, the model is weakly bound to the rest of the application, you can change it without any hard dependency with other part of the application and can be easily use it anywhere inside the application. TypeORM is very flexible, abstracts the DB system away from the application and allows us to benefits from the use of OOPS concept \cite{point_2020_typeorm}.
 
 \subsection{Bootstrap 3}
-Bootstrap is one of the most popular web development frameworks out there, and it is used for developing highly-responsive projects in HTML, CSS, and JavaScript. Essentially, what Bootstrap does is reduce the time needed to get a modern website up and running.
+Bootstrap is a collection of reusable pieces of code written in HTML, CSS, and JavaScript. However, it is a free and open-source front end web development framework to help you create responsive websites and web applications.
+
+Also, it saves you from having to write lengthy code, since it is intended to create responsive websites. It allows a website to work optimally on varied screen sizes from small screen size as a smartphone to a big screen size of a personal computer \cite{chahal_2019_what}.
 
 \subsection{JQuery}
-jQuery is a cross-platform JavaScript library designed to simplify the client-side scripting of HTML. jQuery is the most popular JavaScript library in use today, with installation on 65\% of the top 10 million highest-trafficked sites on the Web. jQuery is free, open-source software licensed under the MIT License.
+jQuery is a powerful JavaScript library that can enhance your websites regardless of your background.
+
+Created by John Resig, jQuery is an open-source project with a dedicated core team of top-notch JavaScript developers. It provides a wide range of features, an easy-to-learn syntax, and robust cross-platform compatibility in a single compact file. What's
+more, over a hundred plug-ins have been developed to extend jQuery's functionality, making it an essential tool for nearly every client-side scripting occasion \cite{chaffer_2007_learning}.
 
 \subsection{Google Chrome}
-Chrome is a free Internet browser officially released by Google on December 11, 2008. Its features include synchronization with Google services and accounts, tabbed browsing, and automatic translation and spell check of web pages. It also features an integrated address bar/search bar, called the ``omnibox''.
+Chrome, an Internet browser released by Google, Inc., a major American search engine company, in 2008. By 2013 Chrome had become the dominant browser, surpassing Microsoft's Internet Explorer and Mozilla's Firefox in popularity.
+
+Chrome is based on the open-source code of the Chromium project, but Chrome itself is not open-source. The first beta version of Chrome was released on September 2, 2008, for personal computers (PCs) running various versions of Microsoft Corporation's Windows OS (operating system) \cite{hosch_2020_chrome}.
 
 \subsection{Windows 10 / Ubuntu 20 LTS Operating System}
-Microsoft released Windows 10 in July 2015 as a follow-up to Windows 8. The company has said it will update Windows 10 continuously, rather than release a new, full-fledged operating system as a successor. Windows 10 features built-in capabilities that allow corporate IT departments to use mobile device management (MDM) software to secure and control devices running the operating system.
+Microsoft released Windows 10 in July 2015 as a follow-up to Windows 8. The company has said it will update Windows 10 continuously, rather than release a new, full-fledged operating system as a successor. Windows 10 features built-in capabilities that allow corporate IT departments to use mobile device management (MDM) software to secure and control devices running the operating system \cite{margaretrouse_2017_what}.
 
-Ubuntu is a complete Linux operating system, freely available with both community and professional support. The Ubuntu community is built on the ideas enshrined in the Ubuntu Manifesto: that software should be available free of charge, that software tools should be usable by people in their local language and despite any disabilities, and that people should have the freedom to customize and alter their software in whatever way they see fit.
+Ubuntu is a complete Linux operating system, freely available with both community and professional support. The Ubuntu community is built on the ideas enshrined in the Ubuntu Manifesto: that software should be available free of charge, that software tools should be usable by people in their local language and despite any disabilities, and that people should have the freedom to customize and alter their software in whatever way they see fit \cite{_2019_what}.
 
 
 \section{Code and Module structure descriptions}
