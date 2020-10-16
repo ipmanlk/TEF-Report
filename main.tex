@@ -738,6 +738,26 @@ Ubuntu is a complete Linux operating system, freely available with both communit
 
 
 \section{Code and Module structure descriptions}
+\acrshort{mvc} design pattern alongside \acrshort{oop} was used when coding the system. Using that method, it was possible to keep a clear separation between display logic, business logic and database interactions. Following this structure the proposed system was developed in three layers called Model Layer, View Layer and Control Layer.
+
+First and foremost, Model layer or simply Models were used to interact with data. Throughout the project this layer was used to govern the procedures to access data objects and perform any kind of operations on them. This layer is independent from the other two layers.
+
+After that, View Layer was implemented with the help of methods in models to collect data with the purpose of presenting them. It should also be mentioned that this layer reflects the changes happening in the model layer. Which means, a state change in models causes a state change in views that depends on that particular model.
+
+Finally, Control Layer was used to sit in-between Models and Views to facilitate a two-way communication mechanism. Simply put, this is the layer which uses methods defined in models to query required data for views. This layer also contains logic that controls how each and every data flow happens and how to respond to unexpected events.
+
+\subsection{Model Layer implementation}
+A graphical tooled called "MySQL Workbench" was used to design this layer. Also, as the RDBMS MySQL Server was selected. After that, TypeORM was used to map database tables with models (model classes) in order to emphasize relationships such as one-to-one, one-to-many and many-to-many. Furthermore, TypeORM provided features for performing CRUD operations as a part of the mapping process and it helped to manipulate the database in an abstract manner.
+
+\noindent
+Following is the code segment for the Product model (Product.ts).
+
+\lstinputlisting[style=ES6]{segments/Product.ts}
+
+\subsection{View Layer implementation}
+
+\subsection{Control Layer implementation}
+
 
 \section{Acknowledgement of any reused existing codes / APIs}
 
