@@ -747,14 +747,23 @@ After that, View Layer was implemented with the help of methods in models to col
 Finally, Control Layer was used to sit in-between Models and Views to facilitate a two-way communication mechanism. Simply put, this is the layer which uses methods defined in models to query required data for views. This layer also contains logic that controls how each and every data flow happens and how to respond to unexpected events.
 
 \subsection{Model Layer implementation}
-A graphical tooled called "MySQL Workbench" was used to design this layer. Also, as the RDBMS MySQL Server was selected. After that, TypeORM was used to map database tables with models (model classes) in order to emphasize relationships such as one-to-one, one-to-many and many-to-many. Furthermore, TypeORM provided features for performing CRUD operations as a part of the mapping process and it helped to manipulate the database in an abstract manner.
+A graphical tooled called "MySQL Workbench" was used to design this layer. Also, as the \acrshort{rdbms} MySQL Server was selected. After that, TypeORM was used to map database tables with models (model classes) in order to emphasize relationships such as one-to-one, one-to-many and many-to-many. Furthermore, TypeORM provided features for performing CRUD operations as a part of the mapping process and it helped to manipulate the database in an abstract manner.
 
 \noindent
-Following is the code segment for the Product model (Product.ts).
+Following is the code segment for the product model (Product.ts).
 
-\lstinputlisting[style=ES6]{segments/Product.ts}
+\lstinputlisting[style=ES6, caption={Product.ts}]{segments/Product.ts}
 
 \subsection{View Layer implementation}
+View Layer consists of interfaces, users can interact with. In a sense, this can be described as a visual representation of logic and models in the back-end of the system. This layer provides facilities for end users to use the system and carry out various tasks through user interfaces such as different views, forms and tables.
+
+\noindent
+Following are code segments for the product view (product.html and product.js).
+
+\lstinputlisting[language=HTML, caption={product.html}]{segments/product.html}
+
+\newpage
+\lstinputlisting[style=ES6,  caption={product.js}]{segments/product.js}
 
 \subsection{Control Layer implementation}
 

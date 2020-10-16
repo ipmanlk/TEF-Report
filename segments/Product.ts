@@ -1,7 +1,7 @@
-// Import required modules from TypeORM
+// import required modules from TypeORM
 import { Column, Entity, Index, JoinColumn, ManyToOne, OneToMany, PrimaryGeneratedColumn } from "typeorm";
 
-// Import required entities (models)
+// import required entities (models)
 import { MaterialAnalysis } from "./MaterialAnalysis";
 import { ProductCategory } from "./ProductCategory";
 import { Employee } from "./Employee";
