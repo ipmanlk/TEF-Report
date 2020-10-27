@@ -766,8 +766,24 @@ Following are code segments for the product view (product.html and product.js).
 \lstinputlisting[style=ES6,  caption={product.js}]{segments/product.js}
 
 \subsection{Control Layer implementation}
+The layer that sits between the data layer and the interface layer is the control layer. Control layer handles user requests, validate those, and determine what the user is trying to do. Then, it interacts with the data layer if some data need to be obtained and then send a response back to the user. This response will determine the next view user should see.
 
+The sequencing of calls to Models, and/or the sequencing of views and required input from the user defines the application's workflow. Since the control layer acts as a bridge between user and data, workflow of the application is defined in the control layer of the application.
 
+\subsubsection{Data access objects}
+A data access object or \acrshort{dao} is an object that provides an abstract interface for persistent collection of data, such as a database. It provides some specific operations without exposing details of the database. Furthermore, it facilitates the mapping from application calls to the data layer. This helps to deal with concerns such as what data accesses the application needs, in terms of  domain-specific objects, what data types used and how these needs can be satisfied with a specific \acrshort{dbms}.
+
+\noindent
+Following is the code segment for product dao.
+
+\lstinputlisting[style=ES6,  caption={ProductDao.ts}]{segments/ProductDao.ts}
+
+\noindent
+Following is the code segment for product controller.
+
+\lstinputlisting[style=ES6,  caption={ProductController.ts}]{segments/ProductController.ts}
+
+\newpage
 \section{Acknowledgement of any reused existing codes / APIs}
 
 %>>>>>>>>>>>>>>>>>>>>> End of Thesis 
