@@ -1,0 +1,9 @@
+sudo: required 
+dist: focal
+script: 
+
+- sudo apt update && sudo apt install texlive-latex-extra biber texlive-xetex texlive-bibtex-extra -y
+
+- sudo chmod +x compile
+
+- sudo bash compile
