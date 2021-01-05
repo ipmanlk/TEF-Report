@@ -7,3 +7,13 @@ script:
 - sudo chmod +x compile
 
 - sudo bash compile
+
+deploy: 
+  provider: releases 
+  api_key: 
+    secure: "n1ZO1df9lSrSWZAYWIUBSeZ2tTMi41nv47yIEIesKu9raeqos6rfLyUOGJpxFDApOQ6eYugaJ8xJQOtdjvlfukf0npxvs5DfKS2kszBi184H7bQ8PPLOxJVKSz4060RPMBICWiIrJomGRW6s4vI0kUHrp5rIqyBrpoFtnCh4PMluAOasge8wu/Y0NAnvwHJiGpDJD0ChVF2lG2a+HWGFXOBY6ALAVn6CN6IgKIgrEv+ipVczAz3xBLu4ZO1aq91Xra/lWnbqIJhz2YC6uOBeTwU94ZZKpF0rd2K0aIEmLtXe5Q+HK4lEdRxjj42INoe9qseVY83Xu1Ynbu5PzS5EjDkzmoFpIfKugA1yTT3Bv95BluypdGdTiPwVhRX7SSDG1pyNeMAYjlCIlmu5Zl0jNnXM+V28X0ip+mF7g8IgG2SokxRhyPSuS/ZhS0JtweM+eQvqEd1oXeRB43h8OdWm+YQ7RtCJsuI+MGWBleR6NLxaeB8ZYXiark+TMCUc0VhdicDrOz+2E1/bz0fIXm29kpBW/xcfL8zpkl+cg5m5wVpjnRJUzsyVA6ERcWVHzgOJ2GEATYu6cpx6FjSSNw1CMji1248SUTWzKkysNiRGTJU/09p07iAweS8TWv9nqyH/loUfn+YOFfox1/LbNu7PkQBjjhLbcsl+nmfG0lwpMJc="
+  file: "./output/main.pdf"
+  skip_cleanup: true 
+  on: 
+    repo:  ipmanlk/BIT-Dissertation
+    tag: true
