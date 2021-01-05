@@ -15,26 +15,18 @@ say() {
 }
 
 say @b@green[[log: cleared output directory.]] &&
-rm output/* &&
-
-say @b@green[[log: running pre-compilation.]] &&
-xelatex -interaction nonstopmode -halt-on-error -file-line-error -output-directory=./output main.tex &&
-
-clear &&
-
-say @b@green[[log: running biber.]] &&
-biber output/main &&
-
-clear &&
-
-cd output/ &&
-say @b@green[[log: running makeglossaries.]] &&
-makeglossaries main &&
-cd .. &&
-
-clear &&
-
-say @b@green[[log: running post-compilation.]] &&
-xelatex -interaction nonstopmode -halt-on-error -file-line-error -output-directory=./output main.tex && xelatex -interaction nonstopmode -halt-on-error -file-line-error -output-directory=./output main.tex && 
-
-say @b@green[[log: document has been compiled!.]]
+    rm -rf output/* &&
+    say @b@green[[log: running pre-compilation.]] &&
+    xelatex -interaction nonstopmode -halt-on-error -file-line-error -output-directory=./output main.tex &&
+    clear &&
+    say @b@green[[log: running biber.]] &&
+    biber output/main &&
+    clear &&
+    cd output/ &&
+    say @b@green[[log: running makeglossaries.]] &&
+    makeglossaries main &&
+    cd .. &&
+    clear &&
+    say @b@green[[log: running post-compilation.]] &&
+    xelatex -interaction nonstopmode -halt-on-error -file-line-error -output-directory=./output main.tex && xelatex -interaction nonstopmode -halt-on-error -file-line-error -output-directory=./output main.tex &&
+    say @b@green[[log: document has been compiled!.]]
