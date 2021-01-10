@@ -716,13 +716,13 @@ Since, the model is weakly bound to the rest of the application, it can be easil
 \subsection{Bootstrap 3}
 Writing CSS manually for each and every module of the system is a very time-consuming and tedious task. For that reason, there are a number of pre-written, industry standard CSS libraries with reusable code and components. From those, a library called ``Bootstrap 3'' was selected as the main library for designing \acrshort{ui} components for modules in this system.
 
-Also, Bootstrap was used to avoid writing lengthy code and responsiveness of each \acrshort{ui} was well maintained due to the fact that it is intended to create responsive websites. \cite{chahal_2019_bootstrap}.
+Also, Bootstrap was used to avoid writing lengthy code and responsiveness of each \acrshort{ui} was well maintained due to the fact that it is intended to create responsive websites.\cite{chahal_2019_bootstrap}.
 
 \subsection{jQuery}
 Most components in the client-side of this application was programmed using Javascript. Since writing plain Javascript can lead to lengthy, unmaintainable code, JQuery was selected to ease up the process. Furthermore, jQuery was needed as a dependency for Bootstrap 3 library.
 
 ``Created by John Resig, jQuery is an open-source project with a dedicated core team of top-notch JavaScript developers. It provides a wide range of features, an easy-to-learn syntax, and robust cross-platform compatibility in a single compact file. What's
-more, over a hundred plug-ins have been developed to extend jQuery's functionality, making it an essential tool for nearly every client-side scripting occasion \cite{chaffer_2007_jquery}.''
+more, over a hundred plug-ins have been developed to extend jQuery's functionality, making it an essential tool for nearly every client-side scripting occasion \cite{chaffer_2007_jquery}.
 
 \subsection{Google Chrome}
 Since this project is a web-based, a web browser is required to access the client-side aspect of it. Since Google Chrome is the most popular browser with better support for modern Javascript features, it was selected as the primary browser for this project. Furthermore, it should also be mentioned that the DevTools in Chrome was used when debugging and testing the client-side of the system. Even though Google Chrome is the primary browser, since this web-based application comply with W3C standards, it can also be used in other browsers such as Mozilla Firefox, Opera and Apple Safari.
@@ -834,12 +834,100 @@ A system test case is a test designed to verify the functionality of a component
 % TODO: Put proper appendix here
 Following are few of the test cases designed for major system modules. Please refer Appendix E for all of the test cases and results.
 
+\begin{table}[H]
+	\centering
+	\begin{tabular}{ | p{1.5cm} | p{3cm} | p{4.5cm} | p{4cm} | }
+		\hline
+		\bf{Test No.}                & \bf{Test Description} & \bf{Steps to Test} & \bf{Expected Result} \\
+		\hline
+		1                            &
+		Validate user input details. &
+		1. Set account status to enabled.\newline
+		2. Enter correct username.\newline
+		3. Enter correct password.\newline
+		4. Press login button.
+		                             &
+		Successfully login into the system.
+		\\
+		\hline
+		2                            &
+		Validate user input details.
+		                             &
+		1. Set account status to enabled.\newline
+		2. Enter correct username.\newline
+		3. Enter incorrect password.\newline
+		4. Press login button.
+		                             &
+		Display error message ``Incorrect username or password''.                                        \\
+		\hline
+		3                            &
+		Validate user input details.
+		                             &
+		1. Set account status to enabled.\newline
+		2. Enter incorrect username.\newline
+		3. Enter correct password.\newline
+		4. Press login button.
+		                             &
+		Display error message ``Incorrect username or password''.                                        \\
+		\hline
+		4                            &
+		Validate user input details.
+		                             &
+		1. Set account status to enabled.\newline
+		2. Enter both username and password incorrectly.\newline
+		3. Press login button.\newline
+		                             &
+		Display error message ``Incorrect username or password''.                                        \\
+		\hline
+	\end{tabular}
+	\caption{User authentication test cases}
+\end{table}
+
+\section{User Evaluation}
+After implementing the system, a user evaluation, also known as user acceptance testing was carried out. This was done in the client's enviroment with the participation of the client in order to ensure functionalites provided by the final system are cable of satisfying the operational needs of the company.
+
+During this process the client was  introduced to the final system. But this introduction process was very brief because the client was already familiar with the system to some degree, due to that fact that his feedback was constantly taken while the development process was ongoing.
+
+The overall system was tested by the client after inserting an actual business dataset. Modules such as user privileges, products and cost analysis were checked. After that, multiple minor modifications were requested.
+
+Then, other staff members of the business were asked to interact with the system. Therefore, staff members such as cashiers, shop managers, factory manager and factory supervisor used the system with their respective user accounts. This was observed by the owner to make sure privileges are working correctly. During this process, cashiers pointed out few small issues in the customer invoice module. Also, the factory supervisor requested couple of changes in production order confirm module.
+
+After completing the user evaluation, a positive response was received from all participants from the business side and minor modifications they requested were corrected.
+
+Finally, the system was accepted by the client saying it will improve the efficiency of their manual process and help to carry out required tasks smoothly. The certificate received from the client has been appended to appendix G.
+
+% TODO: update appendix here
+
+\chapter{Conclusion}
+
+\section{Critical evaluation of the project}
+
+\section{Lesson learnt}
+
+\section{Future work}
+
 
 %>>>>>>>>>>>>>>>>>>>>> End of Thesis 
 
-%-------- Bibliography
+%-------- references
 \newpage
 \addcontentsline{toc}{chapter}{\bf{References}}
 \singlespacing
 \printbibliography[title={References}]
+
+\chapter*{\Huge Appendix A – System Documentation}
+\addcontentsline{toc}{chapter}{\bf{Appendix A – System Manual}}
+
+\addcontentsline{toc}{chapter}{\bf{Appendix B – Design Documentation}}
+
+\addcontentsline{toc}{chapter}{\bf{Appendix C – User Manual}}
+
+\addcontentsline{toc}{chapter}{\bf{Appendix D – Management Reports}}
+
+\addcontentsline{toc}{chapter}{\bf{Appendix E – Test Cases and Results}}
+
+\addcontentsline{toc}{chapter}{\bf{Appendix F – Client Certificate}}
+
+
 \end{document}
+
