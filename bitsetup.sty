@@ -5,6 +5,12 @@
 \usepackage{fontspec}
 \usepackage[utf8]{inputenc}
 \usepackage[acronym, nonumberlist, section, nogroupskip]{glossaries}
+
+% fix space between glossary items
+\usepackage{enumitem}
+\setlist[description]{itemsep=0.1ex, leftmargin=0cm,rightmargin=0cm} % keep some space...looks nice
+% \setlist[description]{noitemsep} remove all spaces 
+
 \usepackage[english]{babel}
 \usepackage{indentfirst}
 \usepackage{titlesec}
