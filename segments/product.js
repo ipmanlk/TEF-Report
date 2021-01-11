@@ -12,31 +12,6 @@ class productForm extends Form {
 			}
 		});
 	}
-
-	// overwrrite load entry
-	loadEntry(entry) {
-		this.reset();
-		this.selectedEntry = entry;
-		// load entry values to form
-		Object.keys(entry).forEach((key) => {
-			// ignore file uploads
-			if ($(`#${this.formId} #${key}`).attr("type") == "file") return;
-			// ignore dropdown values
-			if (this.dropdownIds.indexOf(key) !== -1) return;
-			// set value in the form input
-			$(`#${this.formId} #${key}`).val(entry[key]);
-		});
-		// select dropdown values
-		this.dropdownIds.forEach((dropdownId) => {
-			this.selectDropdownOptionByValue(dropdownId, entry[dropdownId]);
-		});
-		// set profile picture preview
-		const imageURL = MiscUtil.getURLfromBuffer(entry.photo);
-
-		$(`#${this.formId} #photoPreview`).attr("src", imageURL);
-		// show appropriate buttons
-		this.setButtionsVisibility("edit");
-	}
 }
 
 /*----------------------------------------------------------------
