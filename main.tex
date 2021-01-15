@@ -946,8 +946,16 @@ Since this project is web-based and store important things such as payment infor
 \singlespacing
 \printbibliography[title={References}]
 
-\chapter*{\Huge Appendix A – System Documentation}
-\addcontentsline{toc}{chapter}{\bf{Appendix A – System Manual}}
+% >>>>>>>>>>>>>>>>>>>> Start of appendix
+
+% reset chapter counter and set numbering to alphabetical
+\renewcommand\thechapter{\Alph{chapter}}
+\renewcommand\thesection{\thechapter.\arabic{section}}
+\setcounter{chapter}{0}
+\setcounter{section}{0}
+
+\chapter*{Appendix A – System Documentation}
+\addcontentsline{toc}{chapter}{\bf{Appendix A – System Documentation}}
 This documentation consists of a set of steps to show how to install this web-based sales and production management system and goes through the process of setting up required hardware and software environments as well as the product itself. This guide can be followed by the interested parties when installing the system.
 
 \noindent
@@ -1014,16 +1022,54 @@ System requirements can be verified using the following tables.
 	\item Navigate to {\it{http://localhost:3000}} in a web browser.
 \end{itemize}
 
-After following these steps, you will be able to gain access to the web-baed user interface of the system. Refer to the Appendix C on how to use the UI.
+After following these steps, you will be able to gain access to the web-based user interface of the system. Refer to the Appendix C on how to use the UI.
 
+% new appendix
+\setcounter{chapter}{2}
+\chapter*{\Huge Appendix B – Design Documentation}
 \addcontentsline{toc}{chapter}{\bf{Appendix B – Design Documentation}}
 
+\section{Database design}
+Following figures shows the database design of major tables in the system.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{apDatabaseDesign/test.png}
+	\caption{Employee table}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{apDatabaseDesign/test.png}
+	\caption{Product table}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{apDatabaseDesign/test.png}
+	\caption{Supplier table}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{apDatabaseDesign/test.png}
+	\caption{Supplier table}
+\end{figure}
+
+% new appendix
+\chapter*{\Huge Appendix C – User Manual}
 \addcontentsline{toc}{chapter}{\bf{Appendix C – User Manual}}
 
+% new appendix
+\chapter*{\Huge Appendix C – Management Reports}
 \addcontentsline{toc}{chapter}{\bf{Appendix D – Management Reports}}
 
+% new appendix
+\chapter*{\Huge Appendix C – Test Cases and Results}
 \addcontentsline{toc}{chapter}{\bf{Appendix E – Test Cases and Results}}
 
+% new appendix
+\chapter*{\Huge Appendix F – Client Certificate}
 \addcontentsline{toc}{chapter}{\bf{Appendix F – Client Certificate}}
 
 
