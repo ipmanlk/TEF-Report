@@ -951,9 +951,10 @@ Since this project is web-based and store important things such as payment infor
 % reset chapter counter and set numbering to alphabetical
 \renewcommand\thechapter{\Alph{chapter}}
 \renewcommand\thesection{\thechapter.\arabic{section}}
-\setcounter{chapter}{0}
-\setcounter{section}{0}
 
+\setcounter{chapter}{1}
+\setcounter{section}{0}
+\setcounter{figure}{0}
 \chapter*{Appendix A – System Documentation}
 \addcontentsline{toc}{chapter}{\bf{Appendix A – System Documentation}}
 This documentation consists of a set of steps to show how to install this web-based sales and production management system and goes through the process of setting up required hardware and software environments as well as the product itself. This guide can be followed by the interested parties when installing the system.
@@ -1026,6 +1027,8 @@ After following these steps, you will be able to gain access to the web-based us
 
 % new appendix
 \setcounter{chapter}{2}
+\setcounter{section}{0}
+\setcounter{figure}{0}
 \chapter*{\Huge Appendix B – Design Documentation}
 \addcontentsline{toc}{chapter}{\bf{Appendix B – Design Documentation}}
 
@@ -1057,14 +1060,51 @@ Following figures shows the database design of major tables in the system.
 \end{figure}
 
 % new appendix
+\setcounter{chapter}{3}
+\setcounter{section}{0}
+\setcounter{figure}{0}
 \chapter*{\Huge Appendix C – User Manual}
 \addcontentsline{toc}{chapter}{\bf{Appendix C – User Manual}}
+This sales and production management system was developed for the purpose of improving the efficiency of daily tasks and provide means to carry out daily business processes smoothly. In order to gain the most out of this, it is mandatory to understand how to use its functions and facilities efficiently.
+
+This documentation provides an initial overview of the system and essential knowledge every user must have when using it. Please go through the following step-by-step guide to gain an understanding of the basics before using the system.
+
+\section{Logging into the system}
+
+\begin{itemize}
+	\item Enter the proper URL in the browser. If you are running locally, it should be {\it{http://localhost:3000}}. Then, you will see a login page as below.
+
+	      \begin{figure}[H]
+		      \centering
+		      \includegraphics[width=1\textwidth]{apUserManual/loginPage.png}
+		      \caption{Login form of the system}
+	      \end{figure}
+
+	\item Enter your username (E-Mail) and password. Then, click the login button. If you are logging in for the first time, use {\it\bf{admin@admin.com}} as the username and {\it\bf{admin}} as the password.
+	\item After logging in, you should see a dashboard page as below.
+
+	      \begin{figure}[H]
+		      \centering
+		      \includegraphics[width=1\textwidth]{apUserManual/dashboard.png}
+		      \caption{Dashboard of the system}
+	      \end{figure}
+
+	\item You can use the search bar on top to quickly find a module or use the left side menu to view categories and modules under them. Almost all modules follow a similar structure making it easier to switch.
+\end{itemize}
+
+This is how a user can gain access to the system. Next, the process of using an individual module will be explained.
 
 % new appendix
+\setcounter{chapter}{4}
+\setcounter{section}{0}
+\setcounter{figure}{0}
 \chapter*{\Huge Appendix C – Management Reports}
 \addcontentsline{toc}{chapter}{\bf{Appendix D – Management Reports}}
 
 % new appendix
+\setcounter{chapter}{5}
+\setcounter{section}{0}
+\setcounter{figure}{0}
 \chapter*{\Huge Appendix C – Test Cases and Results}
 \addcontentsline{toc}{chapter}{\bf{Appendix E – Test Cases and Results}}
 
