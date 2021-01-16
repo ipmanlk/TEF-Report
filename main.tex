@@ -822,7 +822,7 @@ In this chapter, all tasks that were performed to verify the suitability of the 
 Testing of the final product was performed by devising a test plan to test both technical aspects and user interactions. Under these two categories various test cases and tasks were performed to test components such as authentication, permission handling and interaction flow of user interfaces.
 
 
-\section{System test plan}
+\section{Test plan}
 A system test plan is a very crucial document of the testing phase. This should have the ability to test the functionality of the overall system and make sure the final product meets the client's requirements. By properly constructing a test plan with suitable test cases, system errors and functionality problems can be identified. This can avoid those issues happening in the production environment.
 
 Due to the fact that this project followed an iterative and incremental approach, unit tests were performed with the help of a test plan from very early in the development. Thus, most errors and problems were identified early in the development.
@@ -831,55 +831,60 @@ After unit tests were completed, an integration testing where all units were tes
 
 Finally, a system testing was performed for the completed web-based application at the client's environment using organizational data to ensure the developed product runs problem-free and provides the required functionality.
 
-\section{System test cases}
+\section{Proof of testing of work / Results of work}
 A system test case is a test designed to verify the functionality of a component in the system. Therefore, in order to verify all of the system functionalities, there should be a properly planned test case for each and every function.
 
-Following are a few of the test cases designed for major system modules. Please refer to Appendix E for all test cases and results.
+Following are a few of the test cases designed for major system modules. Please refer to Appendix E for all test cases and results. \newline
 
 \begin{table}[H]
 	\centering
-	\begin{tabular}{ | p{1.5cm} | p{3cm} | p{4.5cm} | p{4cm} | }
+	\begin{tabular}{ | p{1cm} | p{3cm} | p{4.5cm} | p{3cm} | p{1cm} | }
 		\hline
-		\bf{Test No.}                & \bf{Test Description} & \bf{Steps to Test} & \bf{Expected Result} \\
+		\bf{Test No}                                              & \bf{Description} & \bf{Steps to Test} & \bf{Expected Result} & \bf{Pass / Fail} \\
 		\hline
-		1                            &
-		Validate user input details. &
+		1                                                         &
+		Validate user input details.                              &
 		1. Set account status to enabled.\newline
 		2. Enter correct username.\newline
 		3. Enter correct password.\newline
 		4. Press login button.
-		                             &
-		Successfully login into the system.
-		\\
+		                                                          &
+		Successfully login to the system.                         &
+		Pass                                                                                                                                        \\
 		\hline
-		2                            &
+		2                                                         &
 		Validate user input details.
-		                             &
+		                                                          &
 		1. Set account status to enabled.\newline
 		2. Enter correct username.\newline
 		3. Enter incorrect password.\newline
 		4. Press login button.
-		                             &
-		Display error message ``Incorrect username or password''.                                        \\
+		                                                          &
+		Display error message ``Incorrect username or password''.
+		                                                          &
+		Pass                                                                                                                                        \\
 		\hline
-		3                            &
+		3                                                         &
 		Validate user input details.
-		                             &
+		                                                          &
 		1. Set account status to enabled.\newline
 		2. Enter incorrect username.\newline
 		3. Enter correct password.\newline
 		4. Press login button.
-		                             &
-		Display error message ``Incorrect username or password''.                                        \\
+		                                                          &
+		Display error message ``Incorrect username or password''.
+		                                                          &
+		Pass                                                                                                                                        \\
 		\hline
-		4                            &
+		4                                                         &
 		Validate user input details.
-		                             &
+		                                                          &
 		1. Set account status to enabled.\newline
 		2. Enter both username and password incorrectly.\newline
 		3. Press login button.\newline
-		                             &
-		Display error message ``Incorrect username or password''.                                        \\
+		                                                          &
+		Display error message ``Incorrect username or password''. &
+		Pass                                                                                                                                        \\
 		\hline
 	\end{tabular}
 	\caption{User authentication test cases}
@@ -1182,9 +1187,18 @@ This system provides features for the management to generate various reports in 
 \setcounter{chapter}{5}
 \setcounter{section}{0}
 \setcounter{figure}{0}
-\chapter*{\Huge Appendix E – Test Cases and Results}
+\chapter*{\Huge Appendix E – Test Cases / Results}
 \addcontentsline{toc}{chapter}{\bf{Appendix E – Test Cases and Results}}
 
+\section{Test cases and test results for product form}
+\begin{table}[H]
+	\begin{tabular}{ | p{1cm} | p{5cm} | p{5cm} | p{2cm} | }
+		\hline
+		\bf{Test No} & \bf{Description} & \bf{Expected Result} & \bf{Pass / Fail} \\
+		\hline
+	\end{tabular}
+	\caption{User authentication test cases}
+\end{table}
 
 
 % new appendix
