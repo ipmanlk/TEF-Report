@@ -1193,18 +1193,117 @@ This system provides features for the management to generate various reports in 
 \setcounter{chapter}{5}
 \setcounter{section}{0}
 \setcounter{figure}{0}
+\setcounter{table}{0}
 \chapter*{\Huge Appendix E – Test Cases / Results}
 \addcontentsline{toc}{chapter}{\bf{Appendix E – Test Cases and Results}}
 
-\section{Test cases and test results for product form}
-\begin{table}[H]
-	\begin{tabular}{ | p{1cm} | p{5cm} | p{5cm} | p{2cm} | }
-		\hline
-		\bf{Test No} & \bf{Description} & \bf{Expected Result} & \bf{Pass / Fail} \\
-		\hline
-	\end{tabular}
-	\caption{User authentication test cases}
-\end{table}
+\section{Test cases and test results for product package form}
+
+\begin{longtable}{ | p{1cm} | p{5cm} | p{5cm} | p{2cm} | }
+	\hline
+	\bf{Test No} & \bf{Description} & \bf{Expected Result} & \bf{Pass / Fail} \\
+	\hline
+	1
+	             &
+	Relevant product should be selected.
+	             &
+	Green tick mark displayed next to the selector.\newline
+	\includegraphics[width=5cm]{apTestCases/productPkg/product.png}
+	             &
+	Pass                                                                      \\
+	\hline
+	2
+	             &
+	Pieces should be a non-decimal positive number.
+	             &
+	Green tick mark displayed next to the selector.\newline
+	\includegraphics[width=5cm]{apTestCases/productPkg/pieces.png}
+	             &
+	Pass                                                                      \\
+	\hline
+	3
+	             &
+	Relevant product package type should be selected.
+	             &
+	Green tick mark displayed next to the selector.\newline
+	\includegraphics[width=5cm]{apTestCases/productPkg/pkgType.png}
+	             &
+	Pass                                                                      \\
+	\hline
+	4
+	             &
+	Product name should contain 5-200 alphanumeric characters.
+	             &
+	Green tick mark displayed next to the selector.\newline
+	\includegraphics[width=5cm]{apTestCases/productPkg/pkgName.png}
+	             &
+	Pass                                                                      \\
+	\hline
+	5
+	             &
+	Weight should be a positive decimal number with maximum seven digit whole number and two digit decimal part.
+	             &
+	Green tick mark displayed next to the selector.\newline
+	\includegraphics[width=5cm]{apTestCases/productPkg/weight.png}
+	             &
+	Pass                                                                      \\
+	\hline
+	6
+	             &
+	Weight unit type should be selected.
+	             &
+	Green tick mark displayed next to the selector.\newline
+	\includegraphics[width=5cm]{apTestCases/productPkg/weightUnit.png}
+	             &
+	Pass                                                                      \\
+	\hline
+	7
+	             &
+	Production cost should be a positive decimal number with maximum seven digit whole number and two digit decimal part.
+	             &
+	Green tick mark displayed next to the selector.\newline
+	\includegraphics[width=5cm]{apTestCases/productPkg/productionCost.png}
+	             &
+	Pass                                                                      \\
+	\hline
+	8
+	             &
+	Re-Order point should be a non-decimal positive number.
+	             &
+	Green tick mark displayed next to the selector.\newline
+	\includegraphics[width=5cm]{apTestCases/productPkg/rop.png}
+	             &
+	Pass                                                                      \\
+	\hline
+	9
+	             &
+	Photo of the product package with either .jpg or .png extension should be selected.
+	             &
+	Green tick mark displayed next to the selector.\newline
+	\includegraphics[width=5cm]{apTestCases/productPkg/photo.png}
+	             &
+	Pass                                                                      \\
+	\hline
+	10
+	             &
+	Added date should be automatically filled.
+	             &
+	Added date is displayed with read-only enabled.\newline
+	\includegraphics[width=5cm]{apTestCases/productPkg/addedDate.png}
+	             &
+	Pass                                                                      \\
+	\hline
+	11
+	             &
+	Product package status should be selected.
+	             &
+	Green tick mark displayed next to the selector.\newline
+	\includegraphics[width=5cm]{apTestCases/productPkg/pkgStatus.png}
+	             &
+	Pass                                                                      \\
+	\hline
+	\caption{Product package test cases}
+\end{longtable}
 
 
 % new appendix
