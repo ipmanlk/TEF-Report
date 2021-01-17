@@ -1302,8 +1302,82 @@ This system provides features for the management to generate various reports in 
 	             &
 	Pass                                                                      \\
 	\hline
+	13
+	             &
+	Product package code should be displayed when new entry is added.
+	             &
+	New modal is displayed with the product package code.\newline
+	\includegraphics[width=5cm]{apTestCases/productPkg/successModal.png}
+	             &
+	Pass                                                                      \\
+	\hline
 	\caption{Product package test cases}
 \end{longtable}
+
+
+\section{Test cases and test results for material analysis module}
+
+\begin{longtable}{ | p{1cm} | p{5cm} | p{5cm} | p{2cm} | }
+	\hline
+	\bf{Test No} & \bf{Description} & \bf{Expected Result} & \bf{Pass / Fail} \\
+	\hline
+	1
+	             &
+	Relevant product should be selected.
+	             &
+	Green tick mark displayed next to the selector.\newline
+	\includegraphics[width=5cm]{apTestCases/materialAnalysis/product.png}
+	             &
+	Pass                                                                      \\
+	\hline
+	2
+	             &
+	Proper material should be selected.
+	             &
+	Green tick mark displayed next to the selector.\newline
+	\includegraphics[width=5cm]{apTestCases/materialAnalysis/material.png}
+	             &
+	Pass                                                                      \\
+	\hline
+	3
+	             &
+	Amount should be a positive decimal number with maximum seven digit whole number and two digit decimal part.
+	             &
+	Green tick mark displayed next to the selector.\newline
+	\includegraphics[width=5cm]{apTestCases/materialAnalysis/amount.png}
+	             &
+	Pass                                                                      \\
+	\hline
+	4
+	             &
+	Error should be displayed when amount is not provided.
+	             &
+	New modal is displayed with the relevant message.\newline
+	\includegraphics[width=5cm]{apTestCases/materialAnalysis/noAmountError.png}
+	             &
+	Pass                                                                      \\
+	\hline
+	5
+	             &
+	Error should be displayed when material is already in the list.
+	             &
+	New modal is displayed with the relevant message.\newline
+	\includegraphics[width=5cm]{apTestCases/materialAnalysis/alreadyInListError.png}
+	             &
+	Pass                                                                      \\
+	\hline
+	6
+	             &
+	Success toast should be displayed when the ``Update'' button is clicked.
+	             &
+	New toast is displayed with the relevant message.\newline
+	\includegraphics[width=5cm]{apTestCases/materialAnalysis/success.png}
+	             &
+	Pass                                                                      \\
+	\hline
+	\caption{Material analysis test cases}
+\end{longtable}
+
 
 
 % new appendix
