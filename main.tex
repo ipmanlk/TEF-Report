@@ -810,7 +810,7 @@ jQuery is not a language, but it is a well written JavaScript code. As quoted on
 official jQuery website, ``it is a fast and concise JavaScript Library that simplifies HTML document traversing, event handling, animating, and Ajax interactions for rapid web development'' \cite{chaffer_2007_jquery}.
 
 \chapter{Evaluation}
-After concluding the design and implementation phases, a validation and verification process need to be performed on it to see if the final product meets client requirements and necessary quality standards. This entire process is known as ``Evaluation''.
+After concluding the design and implementation phases, a validation and verification process need to be performed on the system to see if the final product meets client requirements and necessary quality standards. This entire process is known as ``Evaluation''.
 
 In this chapter, all tasks that were performed to verify the suitability of the final product such as authentication testing will be explained in detail along with the plans that they were based upon. The process of evaluation can also be described as follows,
 
@@ -819,26 +819,40 @@ In this chapter, all tasks that were performed to verify the suitability of the 
 % put some shit here
 
 \section{Description of testing approach}
-Testing of the final product was performed by devising a test plan to test both technical aspects and user interactions. Under these two categories various test cases and tasks were performed to test components such as authentication, permission handling and interaction flow of user interfaces.
+The system was not only tested throughout the development process but also after the implementation phase was completed. This was done using various testing methods such as unit testing, integrated testing, and system testing.
+A few of these testing methods are explained below.
 
+\subsection{Unit testing}
+This is a software testing method used to test individual units of source code. In this system, individual modules were tested using unit tests with associated control data, usage procedures, and operating procedures to make sure they are functioning as expected. This allowed early detection of problems that could have caused issues later in the development and helped to improve the quality of the overall development process.
+
+A unit test is the smallest testable part of a software and, it usually consists of few inputs and a single output. In the industry, these are typically written and run by software developers in order to check each unit or module is working properly.
+
+\subsection{Integrated testing}
+Integration testing is a testing method which individual program units are combined and tested together as groups. This is carried out after unit testing is completed and allows to check the interoperability of modules as well to identify potential problems that could occur when modules are running together.
+
+In this system, this allowed early detection of issues between modules such as {\it{GRN}} and {\it{Supplier Payment}}. Also, integrated testing helped to prevent module compatibility issues that could have happened later in the development.
+
+\subsection{System testing}
+System testing is a testing method that is performed after the integration testing considering the entire system as a whole. This is usually done in the context of a functional requirement specification or a system requirements specification. Usually, in the industry, a group of independent testers is responsible for executing this.
+
+Under this testing method, the system is tested up to and beyond required software and hardware specifications. Also, this is considered a black-box type of testing where software is evaluated from the users' point of view with the help of requirement documents.
+
+In this system, this method helped to identify performance issues and minor mismatches between actual user requirements and system provided functionalities. Furthermore, this helped to make sure the system is performing well under the minimum required software and hardware specifications.
 
 \section{Test plan}
-A system test plan is a very crucial document of the testing phase. This should have the ability to test the functionality of the overall system and make sure the final product meets the client's requirements. By properly constructing a test plan with suitable test cases, system errors and functionality problems can be identified. This can avoid those issues happening in the production environment.
+A system test plan is a very crucial document of the testing phase. This should have the ability to test the functionality of the overall system and make sure the final product meets the client's requirements. By properly constructing a test plan with suitable test cases, system errors and functionality problems can be identified early. This can avoid those issues happening in the production environment.
 
-Due to the fact that this project followed an iterative and incremental approach, unit tests were performed with the help of a test plan from very early in the development. Thus, most errors and problems were identified early in the development.
+In this system, the test plan consists of a series of different tests that are capable of validating and verifying all required functionalities. The primary purpose of these tests is to identify problems, limitations, and full capabilities of the system while making sure it meets the client requirements. Under this, user scenarios were executed against the system along with screen mapping and error message testing.
 
-After unit tests were completed, an integration testing where all units were tested together was performed. This helped to identify if all units were interacting with each other properly and performing the required functionalities without any problems.
-
-Finally, a system testing was performed for the completed web-based application at the client's environment using organizational data to ensure the developed product runs problem-free and provides the required functionality.
+Besides the above testing methods, security tests and performance tests were conducted to ensure the security and performance of the system meet the required standards. Finally, user acceptance testing was performed to verify the operational use of the system.
 
 \section{Proof of testing of work / Results of work}
 A system test case is a test designed to verify the functionality of a component in the system. Therefore, in order to verify all of the system functionalities, there should be a properly planned test case for each and every function.
 
 Following are a few of the test cases designed for major system modules. Please refer to Appendix E for all test cases and results. \newline
 
-\begin{table}[H]
-	\centering
-	\begin{tabular}{ | p{1cm} | p{3cm} | p{4.5cm} | p{3cm} | p{1cm} | }
+
+	\begin{longtable}{ | p{1cm} | p{3cm} | p{4.5cm} | p{3cm} | p{1cm} | }
 		\hline
 		\bf{Test No}                                              & \bf{Description} & \bf{Steps to Test} & \bf{Expected Result} & \bf{Pass / Fail} \\
 		\hline
@@ -886,9 +900,9 @@ Following are a few of the test cases designed for major system modules. Please 
 		Display error message ``Incorrect username or password''. &
 		Pass                                                                                                                                        \\
 		\hline
-	\end{tabular}
-	\caption{User authentication test cases}
-\end{table}
+
+			\caption{User authentication test cases}
+	\end{longtable}
 
 \section{User Evaluation}
 After implementing the system, a user evaluation, also known as user acceptance testing was carried out. This was done in the client's environment with the participation of the client in order to ensure functionalities provided by the final system are capable of satisfying the operational needs of the company.
