@@ -28,6 +28,10 @@
 % for tables that expand across pages
 \usepackage{longtable}
 
+% fix space between longtable and caption
+\usepackage[tableposition=below]{caption}
+\captionsetup[longtable]{skip=1em}
+
 %================ SETUP: CODE LISTING
 \usepackage{listings}
 \usepackage{xcolor}
