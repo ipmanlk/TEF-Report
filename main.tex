@@ -57,13 +57,13 @@
 \chapter*{\Huge Abstract}
 \addcontentsline{toc}{chapter}{\bf{Abstract}}
 
-Two Elephants Fireworks is a gun-powder based product manufacturing company based in Walpala. Their products range from firecrackers to high-power fireworks for large scale events. Currently, employees in this company have to deal with manually maintaining multiple lists of transactions, products, and material details. There is no way to store and keep track of customer details at the moment and generating reports to make business decisions and observe growth and customer demands is really hard due to the nature of these manual processes.
+Two Elephants Fireworks is a gun-powder based product manufacturing company in Walpala. Their products range from firecrackers to high-power fireworks for large scale events. Currently, employees in this company have to deal with manually maintaining multiple lists of transactions, products, and material details. There is no way to store and keep track of customer details at the moment and generating reports to make business decisions, observe growth and customer demands is really hard due to the nature of these manual processes.
 
-Since the current system is manual, it is very difficult to manage daily sales, orders, material details, the billing process, and the rest of their daily operations. Having to maintain and keep track of hundreds of books and papers makes it very hard and time-consuming to fulfill customer orders and causes some customers to wait for a long period of time. Also, since manually keeping track of the inventory is needed, it consumes a lot of manpower and time. Furthermore, due to human errors, there is a considerable amount of late order deliveries. The owner of this company is also having trouble checking recent orders and sales information while he is traveling.
+Since the current system is manual, it is very difficult to manage daily sales, orders, material details, the billing process, and the rest of their daily operations. Having to maintain and keep track of hundreds of books and papers makes it very hard and time-consuming to fulfill customer orders and causes some customers to wait for a long period of time. Since manually keeping track of the inventory is needed, it consumes a lot of manpower and time. Furthermore, due to human errors, there is a considerable amount of late order deliveries. The owner of this company is also having trouble checking recent orders and sales information while he is traveling.
 
-Taking the above issues into consideration, the proposed system is being developed for a web-based environment. It aims to make it easy to manage daily orders, inventory, material processing, customer details...etc. This system supports users, privileges, and accurate report generating for making business decisions. Not only that but also this will facilitate remote access to the system making it possible to check recent information without having to come to the office.
+Taking the above issues into consideration, the proposed system is being developed for a web-based environment. It aims to make it easy to manage their business processes while introducing better mechanisms to improve their efficiency. This system supports users, privileges, and report generating for making business decisions. Not only that but also this will facilitate remote access to the system making it possible to check recent information without having to come to the office.
 
-Visual Studio Code is being used to develop the proposed system in TypeScript and JavaScript languages. MySQL and TypeORM are used to manage the data storing and retrieving aspect of the system along with Chart.js and Datatables to facilitate the report generating process. Furthermore, \acrlong{uml} was used for the analysis and design processes and this system is being developed according to the \acrshort{mvc} architecture and iterative and incremental approach.
+Visual Studio Code is being used to develop the proposed system in TypeScript and JavaScript languages. MySQL and TypeORM are used to manage the data storing and retrieving aspect of the system along with Chart.js and Datatables to facilitate the report generating process. Furthermore, \acrlong{uml} was used for the analysis and design processes and this system is being developed according to the \acrshort{mvc} architecture using iterative and incremental approach.
 
 This proposed system will achieve the client's functional and non-functional requirements by providing an efficient and user-friendly environment. Also, this will provide tools to optimize business processes and make decisions based on more accurate reports and data.
 
@@ -630,7 +630,7 @@ Since the users of this system are with intermediate computer skills, the system
 
 \newpage
 \chapter{Implementation}
-This chapter will explain how the implementation activities are carried out during the system development. In this phase, designed technical solutions in the design phase are transformed into an executable system that satisfies the client requirements collected in the analysis phase. The implementation process, required hardware, software, design patterns, tools, languages, and frameworks used in the system are briefly described in this chapter.
+This chapter will explain how the implementation activities were carried out during the system development. In this phase, designed technical solutions in the design phase are transformed into an executable system that satisfies the client requirements collected in the analysis phase. The implementation process, required hardware, software, design patterns, tools, languages, and frameworks used in the system are briefly described in this chapter.
 
 \section{Implementation Environment}
 After taking this business organization's nature, functional and non-functional requirements into account, hardware, software, and other resources were selected for the implementation process in order to ensure high performance, maintainability, and technological feasibility. Furthermore, user-friendliness and overall experience were taken into consideration while making these choices.
@@ -717,7 +717,7 @@ Since, the model is weakly bound to the rest of the application, it can be easil
 \subsection{Bootstrap 3}
 Writing CSS manually for each and every module of the system is a very time-consuming and tedious task. For that reason, there are a number of pre-written, industry standard CSS libraries with reusable code and components. From those, a library called ``Bootstrap 3'' was selected as the main library for designing \acrshort{ui} components for modules in this system.
 
-Also, Bootstrap was used to avoid writing lengthy code and responsiveness of each \acrshort{ui} was well maintained due to the fact that it is intended to create responsive websites.\cite{chahal_2019_bootstrap}.
+Also, Bootstrap was used to avoid writing lengthy code and responsiveness of each \acrshort{ui} was well maintained due to the fact that it is intended to create responsive websites \cite{chahal_2019_bootstrap}.
 
 \subsection{jQuery}
 Most components in the client-side of this application was programmed using Javascript. Since writing plain Javascript can lead to lengthy, unmaintainable code, JQuery was selected to ease up the process. Furthermore, jQuery was needed as a dependency for Bootstrap 3 library.
@@ -771,18 +771,18 @@ The layer that sits between the data layer and the interface layer is the contro
 
 The sequencing of calls to Models, and/or the sequencing of views and required input from the user defines the application's workflow. Since the control layer acts as a bridge between user and data, the workflow of the application is defined in the control layer of the application.
 
-\subsubsection{Data access objects}
+\noindent
+Following is the code segment for product controller.
+
+\lstinputlisting[style=ES6,  caption={ProductController.ts}]{segments/ProductController.ts}
+
+\subsection{Data access objects}
 A data access object or \acrshort{dao} is an object that provides an abstract interface for a persistent collection of data, such as a database. It provides some specific operations without exposing details of the database. Furthermore, it facilitates the mapping from application calls to the data layer. This helps to deal with concerns such as what data accesses the application needs, in terms of domain-specific objects, what data types used and how these needs can be satisfied with a specific \acrshort{dbms}.
 
 \noindent
 Following is the code segment for product dao.
 
 \lstinputlisting[style=ES6,  caption={ProductDao.ts}]{segments/ProductDao.ts}
-
-\noindent
-Following is the code segment for product controller.
-
-\lstinputlisting[style=ES6,  caption={ProductController.ts}]{segments/ProductController.ts}
 
 \newpage
 \section{Acknowledgement of any reused existing codes / APIs}
