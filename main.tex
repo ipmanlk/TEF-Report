@@ -864,60 +864,90 @@ Besides the above testing methods, security tests and performance tests were con
 \section{Proof of testing of work / Results of work}
 A system test case is a test designed to verify the functionality of a component in the system. Therefore, in order to verify all of the system functionalities, there should be a properly planned test case for each and every function.
 
-Following are a few of the test cases designed for major system modules. Please refer to Appendix E for all test cases and results. \newline
+Following are a few of the test cases designed for major system modules with their results. Please refer to Appendix E for extended test cases and results. \newline
 
 
-\begin{longtable}{ | p{1cm} | p{3cm} | p{4.5cm} | p{3cm} | p{1cm} | }
+\begin{longtable}{ | p{1cm} | p{2cm} | p{4.5cm} | p{4cm} | p{1cm} | }
 	\hline
-	\bf{Test No}                                              & \bf{Description} & \bf{Steps to Test} & \bf{Expected Result} & \bf{Pass / Fail} \\
+	\bf{Test No}                                                   & \bf{Description} & \bf{Steps to Test} & \bf{Expected Result} & \bf{Pass / Fail} \\
 	\hline
-	1                                                         &
-	Validate user input details.                              &
+	1                                                              &
+	Validate user input details.                                   &
 	1. Set account status to enabled.\newline
 	2. Enter correct username.\newline
 	3. Enter correct password.\newline
 	4. Press login button.
-	                                                          &
-	Successfully login to the system.                         &
-	Pass                                                                                                                                        \\
+	                                                               &
+	Successfully login to the system.                              &
+	Pass                                                                                                                                             \\
 	\hline
-	2                                                         &
+	2                                                              &
 	Validate user input details.
-	                                                          &
+	                                                               &
 	1. Set account status to enabled.\newline
 	2. Enter correct username.\newline
 	3. Enter incorrect password.\newline
 	4. Press login button.
-	                                                          &
-	Display error message ``Incorrect username or password''.
-	                                                          &
-	Pass                                                                                                                                        \\
+	                                                               &
+	Display error message ``Password you provided is wrong''.\newline\newline
+	\includegraphics[width=4cm]{proofOfTesting/auth/wrongPass.png}
+	                                                               &
+	Pass                                                                                                                                             \\
 	\hline
-	3                                                         &
+	3                                                              &
 	Validate user input details.
-	                                                          &
+	                                                               &
 	1. Set account status to enabled.\newline
 	2. Enter incorrect username.\newline
 	3. Enter correct password.\newline
 	4. Press login button.
-	                                                          &
-	Display error message ``Incorrect username or password''.
-	                                                          &
-	Pass                                                                                                                                        \\
+	                                                               &
+	Display error message ``Unable to find a user with that username''.\newline\newline
+	\includegraphics[width=4cm]{proofOfTesting/auth/wrongUser.png}
+	                                                               &
+	Pass                                                                                                                                             \\
 	\hline
-	4                                                         &
+	4                                                              &
 	Validate user input details.
-	                                                          &
+	                                                               &
 	1. Set account status to enabled.\newline
 	2. Enter both username and password incorrectly.\newline
 	3. Press login button.\newline
-	                                                          &
-	Display error message ``Incorrect username or password''. &
-	Pass                                                                                                                                        \\
+	                                                               &
+	Display error message ``Unable to find a user with that username''.\newline\newline
+	\includegraphics[width=4cm]{proofOfTesting/auth/wrongUser.png} &
+	Pass                                                                                                                                             \\
 	\hline
 
-	\caption{User authentication test cases}
+	\caption{User authentication test cases and results}
 \end{longtable}
+
+\begin{longtable}{ | p{1cm} | p{2cm} | p{4.5cm} | p{4cm} | p{1cm} | }
+	\hline
+	\bf{Test No}                                      & \bf{Description} & \bf{Steps to Test} & \bf{Expected Result} & \bf{Pass / Fail} \\
+	\hline
+	1                                                 &
+	Logout of the system.                             &
+	1. Open the drop-down menu in the top right corner.\newline
+	2. Press ``logout'' option.\newline
+	                                                  &
+	Logout from the system and redirect to login page &
+	Pass                                                                                                                                \\
+	\hline
+	2                                                 &
+	Check logout state change.
+	                                                  &
+	1. Logout from the system.\newline
+	2. Refresh the webpage.\newline
+	3. Press the ``back button'' of the browser.
+	                                                  &
+	Redirect back to the login page.
+	                                                  &
+	Pass                                                                                                                                \\
+	\hline
+	\caption{System logout test cases and results}
+\end{longtable}
+
 
 \section{User Evaluation}
 After implementing the system, a user evaluation, also known as user acceptance testing was carried out. This was done in the client's environment with the participation of the client in order to ensure functionalities provided by the final system are capable of satisfying the operational needs of the company.
@@ -1260,7 +1290,7 @@ This system provides features for the management to generate various reports in 
 \chapter*{\Huge Appendix E – Test Cases / Results}
 \addcontentsline{toc}{chapter}{\bf{Appendix E – Test Cases and Results}}
 
-\section{Test cases and test results for product package form}
+\section{Test cases and results for product package form}
 
 \begin{longtable}{ | p{1cm} | p{5cm} | p{5cm} | p{2cm} | }
 	\hline
@@ -1374,11 +1404,11 @@ This system provides features for the management to generate various reports in 
 	             &
 	Pass                                                                      \\
 	\hline
-	\caption{Product package test cases}
+	\caption{Product package test cases and results}
 \end{longtable}
 
 
-\section{Test cases and test results for material analysis module}
+\section{Test cases and results for material analysis module}
 
 \begin{longtable}{ | p{1cm} | p{5cm} | p{5cm} | p{2cm} | }
 	\hline
@@ -1438,7 +1468,7 @@ This system provides features for the management to generate various reports in 
 	             &
 	Pass                                                                      \\
 	\hline
-	\caption{Material analysis test cases}
+	\caption{Material analysis test cases and results}
 \end{longtable}
 
 
