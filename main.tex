@@ -63,9 +63,8 @@
 \thispagestyle{plain}
 \chapter*{\Huge Abstract}
 \addcontentsline{toc}{chapter}{\bf{Abstract}}
-
 Two Elephants Fireworks is a gun-powder based product manufacturing company in Walpala. Their products range from firecrackers to high-power fireworks for large scale events. Currently, employees in this company have to deal with manually maintaining multiple lists of transactions, products, and material details. There is no way to store and keep track of customer details at the moment and generating reports to make business decisions, observe growth and customer demands is really hard due to the nature of these manual processes.
-
+\index{Material}
 Since the current system is manual, it is very difficult to manage daily sales, orders, material details, the billing process, and the rest of their daily operations. Having to maintain and keep track of hundreds of books and papers makes it very hard and time-consuming to fulfill customer orders and causes some customers to wait for a long period of time. Since manually keeping track of the inventory is needed, it consumes a lot of manpower and time. Furthermore, due to human errors, there is a considerable amount of late order deliveries. The owner of this company is also having trouble checking recent orders and sales information while he is traveling.
 
 Taking the above issues into consideration, the proposed system is being developed for a web-based environment. It aims to make it easy to manage their business processes while introducing better mechanisms to improve their efficiency. This system supports users, privileges, and report generating for making business decisions. Not only that but also this will facilitate remote access to the system making it possible to check recent information without having to come to the office.
@@ -73,6 +72,7 @@ Taking the above issues into consideration, the proposed system is being develop
 Visual Studio Code is being used to develop the proposed system in TypeScript and JavaScript languages. MySQL and TypeORM are used to manage the data storing and retrieving aspect of the system along with Chart.js and Datatables to facilitate the report generating process. Furthermore, \acrlong{uml} was used for the analysis and design processes and this system is being developed according to the \acrshort{mvc} architecture using iterative and incremental approach.
 
 This proposed system will achieve the client's functional and non-functional requirements by providing an efficient and user-friendly environment. Also, this will provide tools to optimize business processes and make decisions based on more accurate reports and data.
+\index{Web-based}\index{TypeScript}\index{Environment}\index{Non-functional requirements}
 
 %========= PAGE: Acknowledgment
 \newpage
@@ -152,6 +152,7 @@ This chapter introduces background information of the selected company for the p
 
 \section{Motivation}
 Two Elephants Fireworks is one of the major gun-powder based product manufacturers in the Andiambalama. But currently, all of their processes and paperwork are done manually. Due to the high number of clients and suppliers, managing all of their operations this way has become a very time-consuming inefficient task. Below are some of the difficulties they have to face because of their current way of performing tasks.
+\index{Material}
 
 \begin{itemize}
 	\item There is no proper way to manage customer details, so they have to request same details over and over again.
@@ -165,9 +166,13 @@ Two Elephants Fireworks is one of the major gun-powder based product manufacture
 
 In order to provide a reliable solution that can address the above issues, I wish to develop a computer-based sales and production management system. This system will be able to improve the profits, efficiency of daily operations, and overall customer satisfaction by reducing complexities and providing better solutions to existing business processes.
 
+\index{Computer-based}
+
 \section{Aims \& Objectives of the Project}
 
 The intent of this computer-based system is to provide a reliable solution for existing drawbacks.  This system hopes to achieve the following objectives in order to improve the state of current operations.
+\index{Material}\index{Object}
+
 
 \begin{itemize}
 	\item Reduce material and inventory waste by switching to a database approach.
@@ -193,6 +198,8 @@ The intent of this computer-based system is to provide a reliable solution for e
 
 \section{Scope of the Project}
 The scope of this system covers the sales and production area of this business according to their requirements. Below are the details that will be managed by the proposed system.
+
+\index{Material}
 
 \begin{itemize}
 	\item {\bf{Manage customer details.}}\\
@@ -231,6 +238,7 @@ The scope of this system covers the sales and production area of this business a
 	\item {\bf{Manage role privileges.}}\\
 	      Privileges each role have over each module of the system is customized through this facility. This can be used to restrict or allow access to individual parts of the system.
 \end{itemize}
+\index{Privilege}
 
 \newpage
 \chapter{Analysis}
@@ -241,9 +249,11 @@ The requirements should be documented, measurable, testable, traceable, related 
 
 After collecting requirements through various methods they are classified into two categories called functional requirements and non-functional requirements. Furthermore, how much of the actual idea can be implemented will also be considered in this phase.
 
+\index{Requirement}\index{Functional requirements}
+
 \section{Review of similar systems with references}
 By observing existing web-based solutions to similar domains more experience can be obtained on how our proposed system should be developed and how required features should be presented to the user.  Following are a few of the systems that were reviewed before starting building this system.
-
+\index{Web-based}
 \subsection{Sales and Inventory Management System in Dineth Stores}
 This store owner uses their web-based system in order to manage their sales and inventory. This system consists of multiple views allowing users of the system to easily interact and perform tasks.  Furthermore, this system has an online shop feature customers can use to directly place their orders.
 
@@ -323,6 +333,8 @@ In order to capture functional and non-function requirements of the existing sys
 \subsection{Functional Requirements}
 Functional requirements specify features developers must implement in order to allow users to accomplish their tasks (user requirements).  These should describe the business requirements end-users are expecting. Following is the list of functional requirements found in this system.
 
+\index{Requirement}\index{Functional requirements}
+
 \begin{itemize}
 	\item {\bf{Manage item details}} \\
 	      It must be possible to store large amount of items with their information and easily search, edit and delete if the need arises.
@@ -365,6 +377,8 @@ Functional requirements specify features developers must implement in order to a
 \subsection{Non-Functional Requirements}
 Non-functional requirements describe the features this system should have. Non-functional requirements are difficult to work with than functional ones because they depend on each user's perspective and preferences. But, the user-friendliness of the system depends on how well these non-functional requirements are met. Following is the list of non-functional requirements aim to offer in the proposed system.
 
+\index{Requirement}\index{Non-functional requirements}
+
 \begin{itemize}
 	\item {\bf{Security}}\\
 	      Since system will store sensitive details such as personal employee details, there are security measures in place such as user access management, privileges control and unauthorized accedes prevention.
@@ -381,6 +395,7 @@ Non-functional requirements describe the features this system should have. Non-f
 	\item {\bf{Efficiency and consistency}}\\
 	      System has very fast response rates and accurate database management mechanisms preventing issues such as data inconsistencies and slow data retrieval.
 \end{itemize}
+\index{Interface}
 
 \section{Justification for the choice of the development life cycle}
 Due to the nature of the requirements of this system, an iterative and incremental approach was selected as the development methodology. The most prominent reason for this was the unclear nature of requirements and the complexity of operations in the existing manual system.
@@ -392,6 +407,8 @@ Furthermore, actors involved in this system have a tendency of requesting change
 As stated above, this modal provides a flexible framework for developing the system with continuous user-feedback and the ability to modify existing features even in a later stage of the development.
 
 If a modal like the waterfall were to use for this system, it would be very difficult or sometimes impossible to cater to client's requests. Also, since requirements should be clear and the entire system design should be completed early in such a model, the end-product could potentially fail to match client expectations. Thus, choosing the iterative and incremental modal as the development methodology for this project allowed me to overcome the difficulties that could have occurred in a strict modal.
+
+\index{Requirement}
 
 \begin{figure}[H]
 	\centering
@@ -423,6 +440,7 @@ If a modal like the waterfall were to use for this system, it would be very diff
 After performing the analysis phase, the designing phase should be performed to provide a technical solution for gathered functional and non-functional requirements during the analysis phase. This design, or rather solution will serve as the foundation in later stages such as coding and implementation.
 
 In this chapter alternative solutions and design diagrams will be explained with the help of \acrshort{uml}. Furthermore, chosen architectural design and user interface design strategies of the system will also be explained in detail.
+\index{Architectural design}\index{Design strategy}\index{Interface}
 
 \section{Comparison of alternative design strategies}
 
@@ -436,6 +454,7 @@ Even though there exists software targeted towards production management, they a
 This is system is being developed as a web-based solution because the owners and management of this organization want to access information such as reports from outside the workplace. Their managers sometimes interact with clients and suppliers outside and it is required for them to being able to access the system via the internet. Also, they have plans to expand the businesses and start new factories in the future. This also makes a web-based approach ideal for this situation.
 
 Beside above requirements, there are several benefits using a web-based solution for this organization.
+\index{Requirement}\index{Web-based}\index{Design strategy}
 
 \begin{itemize}
 	\item Reduced cost for hardware and infrastructure.
@@ -449,7 +468,7 @@ Beside above requirements, there are several benefits using a web-based solution
 This proposed system is being implemented using the \acrshort{mvc} or \acrlong{mvc} structural design. This pattern isolates the representation of information from user interactions. This is a widely used Object-Oriented design pattern for developing web-based and desktop applications.
 
 Since this model provides isolation between different components based on their usage, it is very suitable for the development of this solution. Furthermore, the nature of this model allows developers to focus on important parts of the system without getting distracted by unnecessary details. This model consists of the following three major components.
-
+\index{Object}
 \begin{itemize}
 	\item {\bf{Model}}\\
 	      This represents the shape of the data and business logic. It maintains the data of the application. Models are being used as objects to retrieve and store information to and from a database.
@@ -467,11 +486,14 @@ Since this model provides isolation between different components based on their 
 	\caption{MVC Architecture}
 \end{figure}
 
+\index{Interface}\index{MVC Architecture}
+
 \acrshort{mvc} modal is popular due to its powerful nature of separating data and its representations. Simply put, the same data can be shown to two different users in two different ways with the help of this modal.
 
 When modeling system operations and business processes \acrshort{uml} Diagrams were used. \acrshort{uml} is a set of modeling diagrams that allows looking at a system in multiple angles. Graphical symbols provided by \acrshort{uml} allows to modal the proposed system in a way that can improve the understandability between designers and developers, sometimes end-users.
 
 Among various diagrams described in the \acrshort{uml} specification, the following were used to model this proposed system.
+\index{Graphical symbol}
 
 \begin{itemize}
 	\item Use case diagram
@@ -491,6 +513,7 @@ In this context, a ``system'' is something being developed or operated, such as 
 	\includegraphics[width=\textwidth]{uml/usecaseSystem.png}
 	\caption{Use Case Diagram for the entire system}
 \end{figure}
+\index{Use Case Diagram}
 
 \newpage
 \subsection{Use Case Narratives}
@@ -561,10 +584,12 @@ In this context, a ``system'' is something being developed or operated, such as 
 	\caption{Use Case Narrative for logging in to the system}
 \end{table}
 
+\index{Narrative}
+
 \newpage
 \subsection{Activity Diagram}
 Activity diagram is another important behavioral diagram in \acrshort{uml} diagram to describe dynamic aspects of the system. Activity diagram is essentially an advanced version of flow chart that modeling the flow from one activity to another activity \cite{vparadigm_2018_uml}.
-
+\index{Behavioral}
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{uml/activityProductionOrder.jpg}
@@ -576,6 +601,7 @@ Activity diagram is another important behavioral diagram in \acrshort{uml} diagr
 	\includegraphics[width=\textwidth]{uml/activityLogin.jpg}
 	\caption{Activity Diagram for logging into the system}
 \end{figure}
+\index{Activity Diagram}
 
 \newpage
 \subsection{Class Diagram}
@@ -614,15 +640,20 @@ The following figures show the complete class diagram for this system and expand
 	\caption{Class Diagram for the system (expanded) - Part 4}
 \end{figure}
 
+\index{Class Diagram}
+
 \newpage
 \subsection{Sequence Diagram}
 \acrshort{uml} Sequence Diagrams are interaction diagrams that detail how operations are carried out. They capture the interaction between objects in the context of a collaboration. Sequence Diagrams are time focus, and they show the order of the interaction visually by using the vertical axis of the diagram to represent time what messages are sent and when \cite{vparadigm_2018_uml}.
+\index{Object}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{uml/sequenceProductionOrder.jpg}
 	\caption{Sequence Diagram for a production order}
 \end{figure}
+
+\index{Sequence Diagram}
 
 \section{Data modelling diagrams}
 \acrlong{erd}, also known as \acrshort{erd}, ER Diagram or ER model, is a type of structural diagram for use in database design. An ERD contains different symbols and connectors that visualize two important information: The major entities within the system scope and the inter-relationships among these entities \cite{vparadigm_2018_uml}.
@@ -647,6 +678,7 @@ A good \acrshort{ui} provides a ``user-friendly'' experience, allowing the user 
 keyboard. A typical \acrshort{gui} of a software program includes a menu bar, toolbar, windows, buttons, and other controls.
 
 Since the users of this system are with intermediate computer skills, the system should allow easy navigation with consistency between separate views. It should also provide simplicity and descriptive feedback messages users with minimal technical knowledge can easily understand.
+\index{Complexity}\index{User interface design}
 
 \subsection{Dashboard UI}
 \begin{figure}[H]
@@ -687,8 +719,11 @@ Since the users of this system are with intermediate computer skills, the system
 \chapter{Implementation}
 This chapter will explain how the implementation activities were carried out during the system development. In this phase, designed technical solutions in the design phase are transformed into an executable system that satisfies the client requirements collected in the analysis phase. The implementation process, required hardware, software, design patterns, tools, languages, and frameworks used in the system are briefly described in this chapter.
 
+\index{Requirement}\index{Transform}\index{Framework}
+
 \section{Implementation Environment}
 After taking this business organization's nature, functional and non-functional requirements into account, hardware, software, and other resources were selected for the implementation process in order to ensure high performance, maintainability, and technological feasibility. Furthermore, user-friendliness and overall experience were taken into consideration while making these choices.
+\index{Feasibility}\index{Environment}\index{Maintainability}\index{Performance}
 
 \subsection{Hardware requirements}
 \begin{itemize}
@@ -716,6 +751,8 @@ After taking this business organization's nature, functional and non-functional 
 	\item Google Chrome
 \end{itemize}
 
+\index{Requirement}
+
 \section{Justification for the choice of implementation platform.}
 After taking many factors into account, various tools and resources were selected for the implementation platform. Following are the major tools that were selected with a brief description of why they were selected and some technical aspects of those tools.
 
@@ -728,6 +765,7 @@ Visual Studio Code has been the first cross-platform development tool in the Mic
 Since both the back-end and front-end of this project were developed using Javascript, TypeScript was selected as the language for the majority of the development. This was due to the fact that it is a superset of Javascript with additional features such as type checking and decorators. Not only that, But also since TypeScript is strongly typed, it was perfect for finding bugs and writing good code.
 
 From a technical standpoint, TypeScript generates JavaScript. it is as simple as that. Instead of requiring a completely new runtime environment, TypeScript generated JavaScript can re-use all of the existing JavaScript tools, frameworks, and wealth of libraries that are available for JavaScript. The TypeScript language and compiler, however, brings the development of JavaScript closer to a more traditional object-oriented experience \cite{rozentals_2015_typescript}.
+\index{TypeScript}\index{Framework}
 
 \subsection{Node.js}
 As mentioned before, the server-side of this project was developed using TypeScript, which basically results and Javascript code. But in order to run Javascript outside the browser, something called a ``runtime'' is required. There are currently two major runtimes for Javascript called ``Node.js'' and ``Deno''. For this, Node.js was selected due to its high popularity and massive community support. Simply put, Node.js is a runtime for writing server-side JavaScript applications. It is built on top of the V8 JavaScript runtime and uses an event-driven, non-blocking I/O model that makes it perfect for data-intensive, real-time applications.
@@ -738,6 +776,7 @@ Node is often used to build back end services that communicate with client-side 
 In order to reduce complexity, development cost and improve stability, various third party libraries were selected to use throughout the project. These libraries should be well organized and maintained to ensure issues like version mismatches and security vulnerabilities. \acrshort{npm} is the Node.js package manager that can provide all these facilities. It was selected as the package manager due to the fact that it comes bundled with the Node.js installer itself and it works seamlessly with Node projects.
 
 In more technical terms, \acrshort{npm}, \acrlong{npm}, is two things: first and foremost, it is an online repository for the publishing of open-source Node.js projects; second, it is a command-line utility for interacting with the said repository that aids in package installation, version management, and dependency management \cite{teixeira_2013_nodejs}.
+\index{Package manager}
 
 \subsection{MySQL 8.0}
 Since database design of this system was done according to the relational database design, multiple choices were available to use as the \acrlong{rdbms} such as PostgreSQL and Microsoft SQL Server. From those, MySQL was selected for this project due to its suitability for the client's requirements and open source nature.
@@ -751,16 +790,19 @@ system (\acrshort{rdbms}) is helpful \cite{vanier_2019_mysql8}.
 Due to the complexity of the system, a tool which can be used to model relational databases easily using \acrshort{erd} was required. Since MySQL workbench can be used in the design phase as a diagramming tool and in the implementation phase as a development tool to forward engineer and generate code from design diagrams, it was selected as the best choice for modeling the database.
 
 According to MySQL documentation and guides, MySQL Workbench is a graphical tool for working with MySQL servers and databases. MySQL Workbench fully supports MySQL server versions 5.6 and higher. It is also compatible with older MySQL server 5.x versions, except in certain situations (like displaying the process list) due to changed system tables. It does not support MySQL server versions 4.x \cite{mclaughlin_2013_mysql}.
+\index{MySQL}
 
 \subsection{Visual Paradigm (UML 8.0) Enterprise Edition}
 When simplifying complex business processes and modeling them, a tool which can assist to visualize them in a user-friendly manner is a must. Visual Paradigm is one of the industry standard tools for modeling business information systems. Also, it can aid the development process through various methods and features. For those reasons, Visual Paradigm was selected as a tool to aid the project.
 
 According to the official documentation, Visual Paradigm is a software tool designed for software development teams to model business information system and manage development processes. Visual Paradigm supports key industry modeling languages and standards such as Unified Modeling Language (UML), SoaML, BPMN, XMI, etc. It offers complete tool-set software companies need for requirements capturing, process analysis, system design, database design, and etc. \cite{vparadigm_2020_introduction}.
+\index{Visual Paradigm}
 
 \subsection{ExpressJs - Web Server}
-For things such as routing and handling requests while checking for authentication, A framework named ``Express.js'' was selected. Express.js is a web application framework for Node.js. It provides various features that make web application development fast and easy which otherwise takes more time using only Node.js.
+For things such as routing and handling requests while checking for authentication, a framework named ``Express.js'' was selected. Express.js is a web application framework for Node.js. It provides various features that make web application development fast and easy which otherwise takes more time using only Node.js.
 
 In more technical terms, Express.js is based on the Node.js middleware module called connect which in turn uses http module. So, any middleware which is based on connect will also work with Express.js \cite{azatmardan_2014_expressjs}.
+\index{Web server}\index{Framework}
 
 \subsection{TypeORM}
 When working with relational databases of large scale, manually running SQL queries and managing them is a tedious task which can lead to long development times and unstable systems. To simply this process, there are tools known as ``ORMs''. These are basically used to interact with databases in a more abstract manner. For Node.js, there are various \acrshort{orm}s available. From those, TypeORM was selected for this project due to its compatibility with TypeScript, great documentation and large community.
@@ -768,11 +810,13 @@ When working with relational databases of large scale, manually running SQL quer
 ``ORM is a type of tool that maps entities with database tables. ORM provides simplified development process by automating object-to-table and table-to-object conversion. Once you can write your data model in one place, it becomes easier to update, maintain, and reuse the code.''\cite{tpoint_2020_typeorm}
 
 Since, the model is weakly bound to the rest of the application, it can be easily changed without any hard dependency with other part of the application and can be easily used anywhere inside the application. TypeORM is very flexible, abstracts the \acrshort{rdbms} system away from the application and allows us to benefits from the use of \acrshort{oop} concepts \cite{tpoint_2020_typeorm}.
+\index{TypeORM}\index{TypeScript}
 
 \subsection{Bootstrap 3}
 Writing CSS manually for each and every module of the system is a very time-consuming and tedious task. For that reason, there are a number of pre-written, industry standard CSS libraries with reusable code and components. From those, a library called ``Bootstrap 3'' was selected as the main library for designing \acrshort{ui} components for modules in this system.
 
 Also, Bootstrap was used to avoid writing lengthy code and responsiveness of each \acrshort{ui} was well maintained due to the fact that it is intended to create responsive websites \cite{chahal_2019_bootstrap}.
+\index{Standard}
 
 \subsection{jQuery}
 Most components in the client-side of this application was programmed using Javascript. Since writing plain Javascript can lead to lengthy, unmaintainable code, JQuery was selected to ease up the process. Furthermore, jQuery was needed as a dependency for Bootstrap 3 library.
@@ -784,9 +828,10 @@ more, over a hundred plug-ins have been developed to extend jQuery's functionali
 Since this project is a web-based, a web browser is required to access the client-side aspect of it. Since Google Chrome is the most popular browser with better support for modern Javascript features, it was selected as the primary browser for this project. Furthermore, it should also be mentioned that the DevTools in Chrome was used when debugging and testing the client-side of the system. Even though Google Chrome is the primary browser, since this web-based application complies with W3C standards, it can also be used in other browsers such as Mozilla Firefox, Opera, and Apple Safari.
 
 Chrome is based on the open-source code of the Chromium project, but Chrome itself is not open-source. The first beta version of Chrome was released on September 2, 2008, for personal computers (PCs) running various versions of Microsoft Corporation's Windows OS (operating system) \cite{hosch_2020_google_chrome}.
+\index{Web-based}\index{Open-source}\index{Standard}
 
 \subsection{Windows 10 / Ubuntu 20 LTS Operating System}
-Since Node.js and Javascript development and deployment can be done in all major platforms, both Windows 10 and Ubuntu 20 was used throughout the development process. Also, Ubuntu was selected as the most suitable operating system for the server-side aspect of the project. Following are brief descriptions of both of these operating systems.
+Since Node.js and JavaScript development and deployment can be done in all major platforms, both Windows 10 and Ubuntu 20 was used throughout the development process. Also, Ubuntu was selected as the most suitable operating system for the server-side aspect of the project. Following are brief descriptions of both of these operating systems.
 
 Microsoft released Windows 10 in July 2015 as a follow-up to Windows 8. The company has said it will update Windows 10 continuously, rather than release a new, full-fledged operating system as a successor. Windows 10 features built-in capabilities that allow corporate IT departments to use mobile device management (MDM) software to secure and control devices running the operating system \cite{margaretrouse_2017_windows10}.
 
@@ -801,9 +846,11 @@ First and foremost, Model layers or simply Models were used to interact with dat
 After that, View Layer was implemented with the help of methods in models to collect data with the purpose of presenting them. It should also be mentioned that this layer reflects the changes happening in the model layer. This means a state change in models causes a state change in views that depends on that particular model.
 
 Finally, Control Layer was used to sit in-between Models and Views to facilitate a two-way communication mechanism. Simply put, this is the layer that uses methods defined in models to query required data for views. This layer also contains logic that controls how each and every data flow happens and how to respond to unexpected events.
+\index{MVC Architecture}
 
 \subsection{Model Layer implementation}
 A graphical tooled called "MySQL Workbench" was used to design this layer. Also, as the \acrshort{rdbms} MySQL Server was selected. After that, TypeORM was used to map database tables with models (model classes) in order to emphasize relationships such as one-to-one, one-to-many and many-to-many. Furthermore, TypeORM provided features for performing CRUD operations as a part of the mapping process and it helped to manipulate the database in an abstract manner.
+\index{MySQL}
 
 \noindent
 Following is the code segment for the product model (Product.ts).
@@ -835,12 +882,14 @@ Following is the code segment for product controller.
 
 \subsection{Data access objects}
 A data access object or \acrshort{dao} is an object that provides an abstract interface for a persistent collection of data, such as a database. It provides some specific operations without exposing details of the database. Furthermore, it facilitates the mapping from application calls to the data layer. This helps to deal with concerns such as what data accesses the application needs, in terms of domain-specific objects, what data types used and how these needs can be satisfied with a specific \acrshort{dbms}.
+\index{Object}
 
 \noindent
 Following is the code segment for product dao.
 
 \lstinputlisting[style=ES6,  caption={ProductDao.ts}]{segments/ProductDao.ts}
 
+\index{Object}
 \newpage
 \section{Acknowledgement of any reused existing codes / APIs}
 I take this place to acknowledge that the following code modules were reused for the development of this sales and production management system.
@@ -856,9 +905,12 @@ Following is a code segment for creating a new table using this library.
 
 \lstinputlisting[style=ES6,  caption={Creating a new table with custom-made library}]{segments/tableLibraryExample.js}
 
+\index{Custom-made}
+
 \subsection{Bootstrap framework}
 Bootstrap is a free and open-source front-end framework for designing
 websites and web applications. It contains HTML- and CSS-based design templates for typography, forms, buttons, navigation and other interface components, as well as optional JavaScript extensions \cite{chahal_2019_bootstrap}.
+\index{Open-source}
 
 \subsection{jQuery library}
 jQuery is not a language, but it is a well written JavaScript code. As quoted on
@@ -881,11 +933,13 @@ A few of these testing methods are explained below.
 This is a software testing method used to test individual units of source code. In this system, individual modules were tested using unit tests with associated control data, usage procedures, and operating procedures to make sure they are functioning as expected. This allowed early detection of problems that could have caused issues later in the development and helped to improve the quality of the overall development process.
 
 A unit test is the smallest testable part of a software and, it usually consists of few inputs and a single output. In the industry, these are typically written and run by software developers in order to check each unit or module is working properly.
+\index{Unit testing}
 
 \subsection{Integrated testing}
 Integration testing is a testing method which individual program units are combined and tested together as groups. This is carried out after unit testing is completed and allows to check the interoperability of modules as well to identify potential problems that could occur when modules are running together.
 
 In this system, this allowed early detection of issues between modules such as {\it{GRN}} and {\it{Supplier Payment}}. Also, integrated testing helped to prevent module compatibility issues that could have happened later in the development.
+\index{Integrated testing}
 
 \subsection{System testing}
 System testing is a testing method that is performed after the integration testing considering the entire system as a whole. This is usually done in the context of a functional requirement specification or a system requirements specification. Usually, in the industry, a group of independent testers is responsible for executing this.
@@ -893,6 +947,7 @@ System testing is a testing method that is performed after the integration testi
 Under this testing method, the system is tested up to and beyond required software and hardware specifications. Also, this is considered a black-box type of testing where software is evaluated from the users' point of view with the help of required documents.
 
 In this system, this method helped to identify performance issues and minor mismatches between actual user requirements and system provided functionalities. Furthermore, this helped to make sure the system is performing well under the minimum required software and hardware specifications.
+\index{Performance}\index{Functional requirements}\index{System testing}
 
 \section{Test plan}
 A system test plan is a very crucial document of the testing phase. This should have the ability to test the functionality of the overall system and make sure the final product meets the client's requirements. By properly constructing a test plan with suitable test cases, system errors and functionality problems can be identified early. This can avoid those issues happening in the production environment.
@@ -900,6 +955,8 @@ A system test plan is a very crucial document of the testing phase. This should 
 In this system, the test plan consists of a series of different tests that are capable of validating and verifying all required functionalities. The primary purpose of these tests is to identify problems, limitations, and full capabilities of the system while making sure it meets the client requirements. Under this, user scenarios were executed against the system along with screen mapping and error message testing.
 
 Besides the above testing methods, security tests and performance tests were conducted to ensure the security and performance of the system meet the required standards. Finally, user acceptance testing was performed to verify the operational use of the system.
+
+\index{Requirement}\index{Standard}\index{Test plan}
 
 \section{Proof of testing of work / Results of work}
 A system test case is a test designed to verify the functionality of a component in the system. Therefore, in order to verify all of the system functionalities, there should be a properly planned test case for each and every function.
@@ -1001,6 +1058,7 @@ Then, other staff members of the business were asked to interact with the system
 After completing the user evaluation, a positive response was received from all participants from the business side and minor modifications they requested were corrected.
 
 Finally, the system was accepted by the client saying it will improve the efficiency of their manual process and help to carry out required tasks smoothly. The certificate received from the client has been appended to appendix F.
+\index{Privileges}
 
 \begin{figure}[H]
 	\centering
@@ -1018,6 +1076,7 @@ Since the start of the company, they have maintained a traditional manual system
 From the very beginning of the project, the client requirements were carefully analyzed and the system was developed in a way to satisfy those requirements while adding more functionality as well as optimized processes to improve existing business processes. Even things such as common user mistakes were considered in the development through real-time feedback and data checking. Even though fulfilling every customer requirement is impossible, the final system was developed to a satisfactory level that meets the client's expectations.
 
 Through an iterative and incremental approach, by comparing user feedback and test results it was concluded that the final system is capable of fulfilling the overall requirements of the client to a satisfactory level.
+\index{Material}
 
 \section{Lesson learnt}
 This project was a great opportunity for me as an undergraduate to get hands-on experience by using the theoretical knowledge I have obtained throughout the past three years. I was able to observe a business in real life and translate that business logic into a computerized system and provide an effective solution to improve the business. Also, I was able to obtain experience on how to communicate with a real client and ethics I should follow as an independent software developer.
@@ -1025,9 +1084,12 @@ This project was a great opportunity for me as an undergraduate to get hands-on 
 Furthermore, I was able to learn multiple technology stacks and design patterns through working on this such as TypeScript, ORMs, MVC, and routing. Also, I learnt how to prepare reports in a meaningful manner to aid business decisions and present them to a person without technical knowledge through means such as charts and tables.
 
 Not only that but also I was managed to gain an understanding of cloud infrastructure and management after the deployment of the final solution in a server running on Amazon Web Services (AWS).
+\index{Technology}\index{TypeScript}
 
 \section{Future work}
 Since this project is web-based and store important things such as payment information, employee personal details and data that can be used to gain competitive advantage over the company, there are future improvements I aim to do to reduce risks as these to a minimum level. Following are few of those improvements.
+
+\index{Machine learning}
 
 \begin{itemize}
 	\item {\bf{Implement OTP-token system when logging in to the system.}} \\
@@ -1070,6 +1132,7 @@ Since this project is web-based and store important things such as payment infor
 \chapter*{Appendix A – System Manual}
 \addcontentsline{toc}{chapter}{\bf{Appendix A – System Manual}}
 This documentation consists of a set of steps to show how to install this web-based sales and production management system and goes through the process of setting up required hardware and software environments as well as the product itself. This guide can be followed by the interested parties when installing the system.
+\index{Web-based}\index{Environment}
 
 \noindent
 {\large{\bf{Step 1}}}\newline
@@ -1121,8 +1184,9 @@ System requirements can be verified using the following tables.
 {\large{\bf{Step 2}}}
 \begin{itemize}
 	\item Open the CD and copy the {\it{SPMS}} directory to the computer.
-	\item Open MySQL Workbentch and import the database (spms.sql) file from the {\it{database}} directory inside the {\it{SPMS}} directory.
+	\item Open MySQL Workbench and import the database (spms.sql) file from the {\it{database}} directory inside the {\it{SPMS}} directory.
 \end{itemize}
+\index{Workbench}
 
 \noindent
 {\large{\bf{Step 3}}}
@@ -1134,6 +1198,7 @@ System requirements can be verified using the following tables.
 \end{itemize}
 
 After following these steps, you will be able to gain access to the web-based user interface of the system. Refer to the Appendix C on how to use the UI.
+\index{MySQL}
 
 % new appendix
 \setcounter{chapter}{2}
@@ -1144,6 +1209,7 @@ After following these steps, you will be able to gain access to the web-based us
 
 \section{Database design}
 The following figures show the database design of major tables in the system.
+\index{Database design}
 
 \begin{figure}[H]
 	\centering
@@ -1190,7 +1256,7 @@ The following figures show the database design of major tables in the system.
 \newpage
 \section{Communication diagrams}
 The following figures show message passing between major objects in the system and their basic interactions.
-
+\index{Object}
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=12cm]{uml/communicationSpplierOrderingProcess.png}
@@ -1212,6 +1278,7 @@ The following figures show message passing between major objects in the system a
 This sales and production management system was developed for the purpose of improving the efficiency of daily tasks and provide means to carry out daily business processes smoothly. In order to gain the most out of this, it is mandatory to understand how to use its functions and facilities efficiently.
 
 This documentation provides an initial overview of the system and essential knowledge every user must have when using it. Please go through the following step-by-step guide to gain an understanding of the basics before using the system.
+\index{Essential}
 
 \section{Logging into the system}
 
@@ -1286,6 +1353,7 @@ This is how a user can gain access to the system. Next, the process of using an 
 \chapter*{\Huge Appendix D – Management Reports}
 \addcontentsline{toc}{chapter}{\bf{Appendix D – Management Reports}}
 This system provides features for the management to generate various reports in order to aid the decision-making process. These reports can be used for things such as observing the growth, identifying new trends, customer demand, and production costs. Furthermore, these can be generated for daily, monthly, and yearly intervals and can be easily printed in a summarized manner. Following is a list of reports available for users.
+\index{Decision-making}
 
 \section{Sales report}
 \begin{figure}[H]
@@ -1511,7 +1579,7 @@ This system provides features for the management to generate various reports in 
 	\caption{Material analysis test cases and results}
 \end{longtable}
 
-
+\index{Material}
 
 % new appendix
 \setcounter{chapter}{6}
