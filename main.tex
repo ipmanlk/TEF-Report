@@ -1,8 +1,5 @@
 
 \documentclass[12pt]{report}
-\usepackage{imakeidx}
-\makeindex
-
 \usepackage{bitsetup}
 
 %=============== START OF THE DOCUMENT
@@ -1536,6 +1533,7 @@ This system provides features for the management to generate various reports in 
 \setcounter{figure}{0}
 \setcounter{table}{0}
 \addcontentsline{toc}{chapter}{\bf{Glossary}}
+\setlist[description]{itemsep=2.0ex, leftmargin=0cm,rightmargin=0cm} % keep some space...looks nice
 
 \printglossary[title={\bf{\Huge Glossary}}]
 

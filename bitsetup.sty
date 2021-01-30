@@ -1,6 +1,7 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{bitsetup}
 
+\usepackage{imakeidx} % for index
 \usepackage{graphicx}
 \usepackage{fontspec}
 \usepackage[utf8]{inputenc}
@@ -112,7 +113,8 @@
 \addbibresource{./references/biblography.bib}
 
 
-%================ SETUP: LIST OF ACRONYMS AND GLOSSARIES
+%================ SETUP: LIST OF ACRONYMS, GLOSSARIES AND INDEX
+\makeindex
 \makeglossaries
 \setglossarystyle{list}
 
@@ -173,13 +175,13 @@
 \newglossaryentry{webbasedsystem}
 {
     name={Web-based system},
-    description={A web-based solution is a way of implementing a solution to a computing issue or business issue through doing some work on the net.}
+    description={A web-based solution is a way of implementing a solution to a computing issue or business issue through doing some work on the net}
 }
 
 \newglossaryentry{crudoperations}
 {
     name={CRUD operations},
-    description={CRUD or C.R.U.D (Create, Retrieve, Update and Delete) operations are the basic operations in any database.}
+    description={CRUD or C.R.U.D (Create, Retrieve, Update and Delete) operations are the basic operations in any database}
 }
 
 %================ SETUP: FORMAT CHAPTER NAMES IN THE DOCUMENT BODY (PAGES)
