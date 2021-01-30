@@ -1,5 +1,7 @@
 
 \documentclass[12pt]{report}
+\usepackage{imakeidx}
+\makeindex
 
 \usepackage{bitsetup}
 
@@ -1526,6 +1528,28 @@ This system provides features for the management to generate various reports in 
 	\includegraphics[width=\textwidth]{apOther/clientCertificate.png}
 	\caption{Client certificate}
 \end{figure}
+
+
+\newpage
+\setcounter{chapter}{7}
+\setcounter{section}{0}
+\setcounter{figure}{0}
+\setcounter{table}{0}
+\addcontentsline{toc}{chapter}{\bf{Glossary}}
+
+\printglossary[title={\bf{\Huge Glossary}}]
+
+\newpage
+\setcounter{chapter}{8}
+\setcounter{section}{0}
+\setcounter{figure}{0}
+\setcounter{table}{0}
+\addcontentsline{toc}{chapter}{\bf{Index}}
+\printindex
+
+\newpage
+\gls{computerbasedsol}\gls{databasemgtsys}\gls{funcreq}\gls{manualsystem}\gls{nonfuncreq}\gls{processmod}
+\gls{webbasedsystem}\gls{crudoperations}
 
 
 \end{document}

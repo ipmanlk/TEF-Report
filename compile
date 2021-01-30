@@ -25,6 +25,7 @@ say @b@green[[log: cleared output directory.]] &&
     cd output/ &&
     say @b@green[[log: running makeglossaries.]] &&
     makeglossaries main &&
+    makeindex main.idx &&
     cd .. &&
     clear &&
     say @b@green[[log: running post-compilation.]] &&
