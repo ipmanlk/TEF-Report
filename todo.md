@@ -9,5 +9,5 @@
 * ~~Don't put links in paragraphs.~~
 * ~~Don't start with "As"~~
 * ~~Reference documentations in the references.~~
-* Mention tables in the text as well.
+~~* Mention tables in the text as well.~~
 *~~ Don't start with "This"~~
